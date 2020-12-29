@@ -32,8 +32,12 @@
   </nav>
   <!-- About -->
   <section id="about">
-    <img src="about_web.png" alt="About me" class="about__image">
-    {{!-- <img src="about_mobile.png" alt="About me" class="about__image"> --}}
+    <picture class="about__image">
+      <source srcset="about_mobile.png" media="(max-width: 1000px)">
+      <source srcset="about_web.png" media="(max-width: 1500px)">
+      <source srcset="about_web.png">
+      <img src="about_web.png" alt="About" style="width: auto;">
+    </picture>
   </section>
   <!-- Education -->
   <section id=" education">
@@ -156,7 +160,7 @@
       <button class="category__btn">All<span class="category__count">2</span></button>
       <button class="category__btn">Front-end<span class="category__count">1</span></button>
       <button class="category__btn">Back-end<span class="category__count">1</span></button>
-      {{!-- <button class="category__btn">mobile<span class="category__count">0</span></button> --}}
+      <button class="category__btn">mobile<span class="category__count">0</span></button>
     </div>
     <div class="projects__detail">
       <a href="" class="project" target="blank">
