@@ -7,19 +7,19 @@
   <title>Jean Kang's portfolio</title>
   <meta name="author" content="Jean Kang">
   <meta name="description" content="Portfolio for Jean, the future world-renowned engineer.">
-  <link rel="icon" type="image/png" href="favicon72.png">
+  <link rel="icon" type="image/png" href="./images/favicon72.png">
   <script src="https://kit.fontawesome.com/de2ce47132.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
-  <script src="../main.js" defer></script>
+  <link rel="stylesheet" href="./style/style.css">
+  <script src="./script/main.js" defer></script>
 </head>
 
 <body>
   <!-- Navbar -->
   <nav id="navbar">
     <div class="navbar__logo">
-      <img src="logo.png"></img>
+      <img src="./images/logo.png"></img>
     </div>
     <ul class="navbar__menu">
       <li class="navbar__menu__item">Home</li>
@@ -30,15 +30,29 @@
       <li class="navbar__menu__item">Contact</li>
     </ul>
   </nav>
+
   <!-- About -->
-  <section id="about">
-    <picture class="about__image">
-      <source srcset="about_mobile.png" media="(max-width: 1000px)">
-      <source srcset="about_web.png" media="(max-width: 1500px)">
-      <source srcset="about_web.png">
-      <img src="about_web.png" alt="About" style="width: auto;">
+  <!-- Switch Image according to the window size -->
+  <!-- Using HTML: <picture> + srcset + media (Art Direction Problem) -->
+  {{!-- <section id="about">
+    <picture>
+      <source srcset="./images/about_mobile.png" media="(max-width: 1000px)">
+      <source srcset="./images/about_web.png" media="(max-width: 1500px)">
+      <source srcset="./images/about_web.png">
+      <img src="./images/about_web.png" alt="About" style="width: auto;">
     </picture>
+  </section> --}}
+
+  <!-- Using JavaScript -->
+  {{!-- <section id="about">
+    <img id="about__image" src="./images/about_web.png" alt="About">
+  </section> --}}
+
+  <!-- Using CSS -->
+  <section id="about">
+    <div id="about__image"></div>
   </section>
+
   <!-- Education -->
   <section id=" education">
     <h1>Education</h1>
@@ -47,19 +61,19 @@
       quam!</p>
     <div class="education__majors">
       <div class="major">
-        <div class="major__icon"><img src="frontend.png" alt="Front-end"></div>
+        <div class="major__icon"><img src="./images/frontend.png" alt="Front-end"></div>
         <div class="major__title">Front-end</div>
         <div class="major__description">HTML, CSS, JavaScript<br>
           React, Vue
         </div>
       </div>
       <div class="major">
-        <div class="major__icon"><img src="mobile.png" alt="Front-end"></div>
+        <div class="major__icon"><img src="./images/mobile.png" alt="Front-end"></div>
         <div class="major__title">Mobile</div>
         <div class="major__description"><br></div>
       </div>
       <div class="major">
-        <div class="major__icon"><img src="backend.png" alt="Front-end"></div>
+        <div class="major__icon"><img src="./images/backend.png" alt="Front-end"></div>
         <div class="major__title">Back-end</div>
         <div class="major__description">JavaScript, NodeJS, MongoDB, mySQL</div>
       </div>
@@ -228,9 +242,9 @@
     <h1 class="contact__title">Contact</h1>
     <h3 class="contcact__email">jeankang.dev@gmail.com</h3>
     <div class="contact__links">
-      <a href="https://linkedin.com/in/yunakang" target="blank"><img src="linkedin.png" alt=""></a>
-      <a href="https://github.com/yunakang" target="blank"><img src="github.png" alt=""></a>
-      <a href="mailto:jeankang.dev@gmail.com" target="blank"><img src="email.png" alt=""></a>
+      <a href="https://linkedin.com/in/yunakang" target="blank"><img src="./images/linkedin.png" alt=""></a>
+      <a href="https://github.com/yunakang" target="blank"><img src="./images/github.png" alt=""></a>
+      <a href="mailto:jeankang.dev@gmail.com" target="blank"><img src="./images/email.png" alt=""></a>
     </div>
     <div class="contact__rights">2020 Jean Kang - All rights reversed</div>
   </section>

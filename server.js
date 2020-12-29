@@ -5,7 +5,7 @@ const exphbs = require('express-handlebars');
 
 app.engine('.hbs', exphbs({ extname: '.hbs' }));
 app.set('view engine', '.hbs');
-app.use(express.static('./views/images/'));
+app.use(express.static('./views/'));
 
 app.get('/', (req, res) => {
   res.render('index', {layout: false});
