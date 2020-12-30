@@ -2,29 +2,43 @@
 :root {
   /* Color */
   --color-navy: #2b3072;
-  --color-grey: #c3bcbf;
 
   /* Font size */
   --font-large: 24px;
-  --font-medium: 16px;
+  --font-medium: 18px;
+  --font-regular: 16px;
   --font-small: 13px;
 
   /* Font weight */
-  --font-bold: 700;
-  --font-semi-bold: 600;
-  --font-medium: 500;
-  --font-regular: 400;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
 
   /* Size */
 }
 
-/* Universal tags */
-* {
-  box-sizing: border-box;
+/* Typography */
+h1 {
+  font-family: "minion pro", sans-serif;
+  font-size: var(--font-large);
+  font-weight: var(--weight-semi-bold);
 }
 
-html {
-  font-size: 16px;
+h3 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+}
+
+/* Universal tags */
+* {
+  font-family: "Rubik", sans-serif;
+  color: var(--color-navy);
+  line-height: 1.5em;
+  box-sizing: border-box;
 }
 
 #about__image {
@@ -35,10 +49,6 @@ html {
 }
 
 @media screen and (max-width: 1000px) {
-  html {
-    font-size: 12px;
-  }
-
   #about__image {
     background: center/cover no-repeat url("../images/about_mobile.png");
     max-width: 100%;
