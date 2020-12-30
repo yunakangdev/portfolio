@@ -41,17 +41,113 @@ p {
   box-sizing: border-box;
 }
 
+html {
+  display: flex;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Navbar */
+#navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#navbar__logo__image {
+  width: 170px;
+  margin-top: 2vh;
+}
+
+.navbar__menu {
+  display: flex;
+}
+
+.navbar__menu__item {
+  padding: 16px 30px;
+  margin: 0 4px;
+}
+
+/* About */
+/* Switch img depends on the window size */
 #about__image {
   background: center/cover no-repeat url("../images/about_web.png");
   max-width: 100%;
   height: 750px;
-  padding-top: 30%;
 }
 
-@media screen and (max-width: 1000px) {
+/* Responsive Design */
+/* iPad Pro */
+@media screen and (max-width: 1024px) {
+  #about__image {
+    height: 60vw;
+  }
+}
+
+/* iPad */
+@media screen and (max-width: 770px) {
+  #navbar__logo__image {
+    width: 120px;
+  }
+
+  .navbar__menu__item {
+    padding: 6px 8px;
+    margin: 0 4px;
+    font-size: 14px;
+  }
+
+  #about__image {
+    background: top/cover no-repeat url("../images/about_mobile.png");
+    max-width: 100%;
+    height: 180vw;
+  }
+}
+
+/* iPhone */
+@media screen and (max-width: 414px) {
+  #navbar__logo__image {
+    width: 110px;
+  }
+
+  .navbar__menu__item {
+    padding: 2px 6px;
+    margin: 0 0px;
+    font-size: 10px;
+  }
+
   #about__image {
     background: center/cover no-repeat url("../images/about_mobile.png");
     max-width: 100%;
-    height: 1200px;
+    height: 80vh;
+  }
+}
+
+/* Galaxy Fold */
+@media screen and (max-width: 280px) {
+  #navbar__logo__image {
+    width: 90px;
+  }
+
+  .navbar__menu__item {
+    padding: 1px 4px;
+    margin: 0 0px;
+    font-size: 9px;
+  }
+
+  #about__image {
+    background: center/cover no-repeat url("../images/about_mobile.png");
+    max-width: 100%;
+    height: 70vh;
   }
 }
