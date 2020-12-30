@@ -24,7 +24,7 @@ Let's make my own portfolio website!
 - [ ] Mouse Hover Event
 - [x] Image Switch
 - [ ] Background Music
-- [ ] Heroku & Domain
+- [x] Heroku & Domain
 
 ---
 
@@ -34,7 +34,7 @@ Let's make my own portfolio website!
 
 - [x] 2020/12/30 : Responsive Design for all devices
 
-- [ ] 2020/12/30 : Heroku Application Error
+- [x] 2020/12/30 : Heroku Application Error
 
   <!-- https://devcenter.heroku.com/articles/error-codes -->
 
