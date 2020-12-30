@@ -11,6 +11,7 @@
 
   /* Font weight */
   --weight-semi-bold: 600;
+  --weight-medium: 500;
   --weight-regular: 400;
 
   /* Size */
@@ -76,8 +77,16 @@ ul {
 }
 
 .navbar__menu__item {
+  font-family: "minion pro", sans-serif;
+  font-weight: var(--weight-medium);
   padding: 16px 30px;
   margin: 0 4px;
+  cursor: pointer;
+}
+
+.navbar__menu__item.active {
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 /* About */
