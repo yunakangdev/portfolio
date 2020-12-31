@@ -33,7 +33,7 @@
 
   <!-- About -->
   <!-- Switch Image according to the window size -->
-  <!-- Using HTML: <picture> + srcset + media (Art Direction Problem) -->
+  <!-- Option 1. Using HTML: <picture> + srcset + media (Art Direction Problem) -->
   {{!-- <section id="about" class="section">
     <picture>
       <source srcset="./images/about_mobile.png" media="(max-width: 1000px)">
@@ -43,48 +43,29 @@
     </picture>
   </section> --}}
 
-  <!-- Using JavaScript -->
+  <!-- About -->
+  <!-- Switch Image according to the window size -->
+  <!-- Option 2. Using JavaScript -->
   {{!-- <section id="about" class="section">
     <img id="about__image" src="./images/about_web.png" alt="About">
   </section> --}}
 
-  <!-- Using CSS -->
+  <!-- About -->
+  <!-- Switch Image according to the window size -->
+  <!-- Option 3. Using CSS -->
   <section id="about">
     <div id="about__image"></div>
   </section>
 
   <!-- Education -->
-  <section id="education" class="section">
+  <div id="education" class="section">
     <h1>Education</h1>
-    <p class="section">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sunt sed laborum, blanditiis
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sunt sed laborum, blanditiis
       sequi mollitia
       adipisci dolorem, rerum magnam officia porro voluptate fuga molestiae recusandae eligendi iste voluptatem aut
       quam!</p>
-    <div class="education__majors">
-      <div class="major">
-        <div class="major__icon"><img src="./images/frontend-navy.png" alt="Front-end"></div>
-        <div class="major__title">
-          <h3>Front-end</h3>
-        </div>
-        <div class="major__description">HTML, CSS, JavaScript<br>
-          React, Vue
-        </div>
-      </div>
-      <div class="major">
-        <div class="major__icon"><img src="./images/mobile-navy.png" alt="Front-end"></div>
-        <div class="major__title">
-          <h3>Mobile</h3>
-        </div>
-        <div class="major__description"><br></div>
-      </div>
-      <div class="major">
-        <div class="major__icon"><img src="./images/backend-navy.png" alt="Front-end"></div>
-        <div class="major__title">
-          <h3>Back-end</h3>
-          <div class="major__description">JavaScript, NodeJS, MongoDB, mySQL</div>
-        </div>
-      </div>
-  </section>
+  </div>
+
   <!-- Skills -->
   <section id="skills" class="section">
     <h1>Skills</h1>
@@ -173,6 +154,7 @@
       </div>
     </div>
   </section>
+
   <!-- Projects -->
   <section id="projects" class="section">
     <h1>Projects</h1>
@@ -206,6 +188,7 @@
       </a>
     </div>
   </section>
+
   <!-- Testimonials -->
   <section id="testimonials" class="section">
     <h1>Testimonials</h1>
@@ -242,6 +225,7 @@
       </div>
     </div>
   </section>
+
   <!-- Contact -->
   <section id="contact" class="section">
     <h1 class="contact__title">Contact</h1>
