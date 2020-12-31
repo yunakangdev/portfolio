@@ -2,6 +2,11 @@
 :root {
   /* Color */
   --color-navy: #2b3072;
+  --color-sky: #c2dbf2;
+  --color-light-sky: #f5ffff;
+  --color-dark-grey: #727171;
+  --color-grey: #919192;
+  --color-light-grey: #a0a0a1;
 
   /* Font size */
   --font-large: 24px;
@@ -28,6 +33,7 @@ h1 {
 h3 {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+  margin: 0;
 }
 
 p {
@@ -59,13 +65,19 @@ a {
 ul {
   list-style: none;
   padding-left: 0;
+  margin: 0;
 }
 
 /* Section common */
 .section {
   text-align: center;
-  padding: 0 50px 50px 50px;
-  max-width: 1200px;
+  padding: 50px 50px 50px 50px;
+  margin: auto;
+}
+
+.section__container {
+  max-width: 1000px;
+  margin: auto;
 }
 
 /* Navbar */
@@ -77,7 +89,7 @@ ul {
 
 #navbar__logo__image {
   width: 170px;
-  margin-top: 2vh;
+  margin-top: 30px;
 }
 
 .navbar__menu {
@@ -86,7 +98,6 @@ ul {
 
 .navbar__menu__item {
   font-family: "minion pro", sans-serif;
-  font-weight: var(--weight-medium);
   padding: 16px 30px;
   margin: 0 4px;
   cursor: pointer;
@@ -97,20 +108,22 @@ ul {
   text-underline-position: under;
 }
 
-/* About */
+/* Home */
 /* Switch img depends on the window size */
-#about__image {
+#home__image {
   background: center/cover no-repeat url("../images/about_web.png");
   max-width: 100%;
   height: 700px;
+  margin: auto;
 }
 
-/* Education */
-.education__majors {
+/* About */
+.about__majors {
   display: flex;
   max-width: 700px;
   margin: auto;
   justify-content: space-between;
+  padding: 50px 0;
 }
 
 .major__icon1 img:hover {
@@ -118,7 +131,7 @@ ul {
 }
 
 .major__icon2 img:hover {
-  content: url("../images/framework_hover.png");
+  content: url("../images/framework_reverse.png");
 }
 
 .major__icon3 img:hover {
@@ -130,11 +143,74 @@ ul {
   font-size: 0.8em;
 }
 
+/* Skills */
+#skills {
+  background-color: var(--color-sky);
+  font-size: var(--font-small);
+}
+
+.skillset {
+  display: flex;
+  margin-top: 50px;
+}
+
+.skillset__left {
+  flex-basis: 60%;
+  background-color: #bf7440;
+  padding: 20px 40px;
+}
+
+.skillset__right {
+  flex-basis: 40%;
+}
+
+.skillset__right .tools {
+  background-color: #f5a36c;
+}
+
+.skillset__right .etc {
+  background-color: #8b4815;
+}
+
+.skillset__title {
+  color: white;
+  padding-bottom: 20px;
+}
+
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+  margin: auto;
+}
+
+.skill__description span,
+.tools__list span,
+.etc__list span {
+  color: white;
+}
+
+.skill {
+  margin: 8px;
+}
+
+.skill__value {
+  height: 3px;
+  background-color: orange;
+}
+
+.skill__bar {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
+
 /* Responsive Design */
 /* iPad Pro */
 @media screen and (max-width: 1024px) {
-  #about__image {
+  #home__image {
     height: 60vw;
+    margin: auto;
   }
 }
 
@@ -142,6 +218,7 @@ ul {
 @media screen and (max-width: 770px) {
   #navbar__logo__image {
     width: 120px;
+    margin-top: 20px;
   }
 
   .navbar__menu__item {
@@ -150,10 +227,11 @@ ul {
     font-size: 14px;
   }
 
-  #about__image {
+  #home__image {
     background: top/cover no-repeat url("../images/about_mobile.png");
     max-width: 100%;
     height: 180vw;
+    margin: auto;
   }
 }
 
@@ -169,10 +247,11 @@ ul {
     font-size: 10px;
   }
 
-  #about__image {
+  #home__image {
     background: center/cover no-repeat url("../images/about_mobile.png");
     max-width: 100%;
-    height: 80vh;
+    height: 110vh;
+    margin: auto;
   }
 }
 
@@ -188,9 +267,10 @@ ul {
     font-size: 9px;
   }
 
-  #about__image {
+  #home__image {
     background: center/cover no-repeat url("../images/about_mobile.png");
     max-width: 100%;
     height: 70vh;
+    margin: auto;
   }
 }
