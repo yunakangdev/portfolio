@@ -14,7 +14,8 @@
   --weight-medium: 500;
   --weight-regular: 400;
 
-  /* Size */
+  /* animation */
+  --animation-duration: 300ms;
 }
 
 /* Typography */
@@ -105,12 +106,23 @@ ul {
 }
 
 /* Education */
-
 .education__majors {
   display: flex;
   max-width: 700px;
   margin: auto;
   justify-content: space-between;
+}
+
+.major__icon1 img:hover {
+  content: url("../images/language_hover.png");
+}
+
+.major__icon2 img:hover {
+  content: url("../images/framework_hover.png");
+}
+
+.major__icon3 img:hover {
+  content: url("../images/db_hover.png");
 }
 
 .major__description {

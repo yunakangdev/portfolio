@@ -12,6 +12,7 @@ Let's make my own portfolio website!
 
 - [x] Home
 - [x] About
+- [ ] Education
 - [ ] Skills
 - [ ] Projects
 - [ ] Testimonials
