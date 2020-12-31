@@ -105,14 +105,16 @@ ul {
 }
 
 /* Education */
+
 .education__majors {
   display: flex;
   justify-content: space-between;
 }
 
 .major__description {
+  display: flex;
+  flex-wrap: wrap;
   max-width: 150px;
-  font-size: 0.9em;
 }
 
 /* Responsive Design */
