@@ -4,9 +4,9 @@
   --color-navy: #2b3072;
   --color-sky: #c2dbf2;
   --color-light-sky: #f5ffff;
-  --color-dark-grey: #727171;
-  --color-grey: #919192;
-  --color-light-grey: #a0a0a1;
+  --color-light-grey: #f9f9f9;
+  --color-grey: #c9cbdb;
+  --color-yellow: #eed672;
 
   /* Font size */
   --font-large: 24px;
@@ -142,6 +142,10 @@ ul {
   content: url("../images/db_hover.png");
 } */
 
+.major__title {
+  padding: 10px;
+}
+
 .major__description {
   max-width: 150px;
   font-size: 0.8em;
@@ -156,29 +160,29 @@ ul {
 .skillset {
   display: flex;
   margin-top: 50px;
+  background-color: white;
 }
 
 .skillset__left {
   flex-basis: 60%;
-  background-color: #bf7440;
   padding: 20px 40px;
 }
 
 .skillset__right {
   flex-basis: 40%;
+  padding: 20px 0;
 }
 
 .skillset__right .tools {
-  background-color: #f5a36c;
+  height: 60%;
 }
 
 .skillset__right .etc {
-  background-color: #8b4815;
+  height: 40%;
 }
 
 .skillset__title {
-  color: white;
-  padding-bottom: 20px;
+  padding-bottom: 16px;
 }
 
 .skill__description {
@@ -186,27 +190,22 @@ ul {
   justify-content: space-between;
   max-width: 500px;
   margin: auto;
-}
-
-.skill__description span,
-.tools__list span,
-.etc__list span {
-  color: white;
+  padding-bottom: 8px;
 }
 
 .skill {
   margin: 8px;
 }
 
-.skill__value {
-  height: 3px;
-  background-color: orange;
-}
-
 .skill__bar {
   width: 100%;
-  height: 3px;
-  background-color: white;
+  height: 4px;
+  background-color: var(--color-yellow);
+}
+
+.skill__value {
+  height: 4px;
+  background-color: orange;
 }
 
 /* Responsive Design */
@@ -236,6 +235,17 @@ ul {
     max-width: 100%;
     height: 180vw;
     margin: auto;
+  }
+
+  .skill__description span,
+  .tools__list,
+  .etc__list {
+    font-size: var(--font-micro);
+  }
+
+  .skill__bar,
+  .skill__value {
+    height: 3px;
   }
 }
 

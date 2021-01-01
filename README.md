@@ -32,7 +32,8 @@ Let's make my own portfolio website!
 
 - [x] 2020/12/28 : Switch images according to the window size using HTML, CSS, JavaScript
 
-- [x] 2020/12/30 : Responsive Design for all devices
+- [ ] 2020/12/30 : Responsive Design for all devices
+      => Iphone 59% issue
 
 - [x] 2020/12/30 : Heroku Application Error
 
@@ -46,12 +47,12 @@ Let's make my own portfolio website!
   2. H20: use boot timeout tool to increase the boot time  
      changed the boot time to 150 seconds
 
-- [x] 2020/12/31 : Switch icons on mouse hover in CSS => too slow
+- [x] 2020/12/31 : Switch icons on mouse hover in CSS
 
-  1. Before : CSS  
+  1. Before : CSS => too slow  
       .class img:hover {
      content: url('');
      };
 
-  2. After : HTML  
+  2. After : HTML => solved  
      `<img src="" onmouseover="this.src=''" onmouseout="this.src=''">`
