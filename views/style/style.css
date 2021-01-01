@@ -200,12 +200,23 @@ ul {
 .skill__bar {
   width: 100%;
   height: 4px;
-  background-color: var(--color-yellow);
+  background-color: var(--color-grey);
 }
 
 .skill__value {
   height: 4px;
-  background-color: orange;
+  background-color: var(--color-yellow);
+}
+
+.skillset:hover .skill__value {
+  animation: improving 3s ease-in-out;
+}
+
+@keyframes improving {
+  to {
+    background: orange;
+    width: 100%;
+  }
 }
 
 /* Responsive Design */
@@ -231,7 +242,7 @@ ul {
   }
 
   #home__image {
-    background: top/cover no-repeat url("../images/about_mobile.png");
+    background: top/cover no-repeat url("../images/home_mobile.png");
     max-width: 100%;
     height: 180vw;
     margin: auto;
