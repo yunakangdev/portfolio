@@ -178,7 +178,7 @@ Option 1. Using HTML + CSS
 
 .skillset__right {
   flex-basis: 40%;
-  padding: 20px 0;
+  padding-top: 20px;
 }
 
 .skillset__right .tools {
@@ -190,7 +190,7 @@ Option 1. Using HTML + CSS
 }
 
 .skillset__title {
-  padding-bottom: 16px;
+  padding-bottom: 18px;
 }
 
 .skill__description {
@@ -201,7 +201,12 @@ Option 1. Using HTML + CSS
   padding-bottom: 8px;
 }
 
-.skill {
+.skill1,
+.skill2,
+.skill3,
+.skill4,
+.skill5,
+.skill6 {
   margin: 8px;
 }
 
@@ -211,19 +216,91 @@ Option 1. Using HTML + CSS
   background-color: var(--color-grey);
 }
 
-.skill__value {
+.skill__value1,
+.skill__value2,
+.skill__value3,
+.skill__value4,
+.skill__value5,
+.skill__value6 {
   height: 4px;
-  background-color: var(--color-yellow);
+  background-color: orange;
 }
 
-.skillset:hover .skill__value {
-  animation: improving 3s ease-in-out;
+.skill1:hover .skill__value1 {
+  animation: improving1 2s ease-in-out forwards;
 }
 
-@keyframes improving {
-  to {
-    background: orange;
+.skill2:hover .skill__value2 {
+  animation: improving2 2s ease-in-out forwards;
+}
+
+.skill3:hover .skill__value3 {
+  animation: improving3 2s ease-in-out forwards;
+}
+
+.skill4:hover .skill__value4 {
+  animation: improving4 2s ease-in-out forwards;
+}
+
+.skill5:hover .skill__value5 {
+  animation: improving5 2s ease-in-out forwards;
+}
+
+.skill6:hover .skill__value6 {
+  animation: improving6 2s ease-in-out forwards;
+}
+
+@keyframes improving1 {
+  50% {
     width: 100%;
+  }
+
+  100% {
+  }
+}
+
+@keyframes improving2 {
+  50% {
+    width: 100%;
+  }
+
+  100% {
+  }
+}
+
+@keyframes improving3 {
+  50% {
+    width: 100%;
+  }
+
+  100% {
+  }
+}
+
+@keyframes improving4 {
+  50% {
+    width: 100%;
+  }
+
+  100% {
+  }
+}
+
+@keyframes improving5 {
+  50% {
+    width: 100%;
+  }
+
+  100% {
+  }
+}
+
+@keyframes improving6 {
+  50% {
+    width: 100%;
+  }
+
+  100% {
   }
 }
 
@@ -256,6 +333,11 @@ Option 1. Using HTML + CSS
     margin: auto;
   }
 
+  .skillset__left {
+    flex-basis: 60%;
+    padding: 20px 20px;
+  }
+
   .skill__description span,
   .tools__list,
   .etc__list {
@@ -263,8 +345,79 @@ Option 1. Using HTML + CSS
   }
 
   .skill__bar,
-  .skill__value {
+  .skill__value1,
+  .skill__value2,
+  .skill__value3,
+  .skill__value4,
+  .skill__value5,
+  .skill__value5 {
     height: 3px;
+  }
+
+  @keyframes improving1 {
+    50% {
+      height: 3px;
+      width: 100%;
+    }
+
+    100% {
+      height: 3px;
+    }
+  }
+
+  @keyframes improving2 {
+    50% {
+      height: 3px;
+      width: 100%;
+    }
+
+    100% {
+      height: 3px;
+    }
+  }
+
+  @keyframes improving3 {
+    50% {
+      height: 3px;
+      width: 100%;
+    }
+
+    100% {
+      height: 3px;
+    }
+  }
+
+  @keyframes improving4 {
+    50% {
+      height: 3px;
+      width: 100%;
+    }
+
+    100% {
+      height: 3px;
+    }
+  }
+
+  @keyframes improving5 {
+    50% {
+      height: 3px;
+      width: 100%;
+    }
+
+    100% {
+      height: 3px;
+    }
+  }
+
+  @keyframes improving6 {
+    50% {
+      width: 100%;
+      height: 3px;
+    }
+
+    100% {
+      height: 3px;
+    }
   }
 }
 
