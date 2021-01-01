@@ -3,10 +3,11 @@
   /* Color */
   --color-navy: #2b3072;
   --color-sky: #c2dbf2;
-  --color-light-sky: #f5ffff;
+  /* --color-light-sky: #f5ffff; */
   --color-light-grey: #f9f9f9;
   --color-grey: #c9cbdb;
   --color-yellow: #eed672;
+  --color-brown: #995d30;
 
   /* Font size */
   --font-large: 24px;
@@ -308,6 +309,40 @@ Option 1. Using HTML + CSS
 
   100% {
   }
+}
+
+/* Contact */
+.contact__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 300px;
+  margin: auto;
+}
+
+[class^="contact__icon"] img {
+  max-width: 50px;
+}
+
+[class^="contact__icon"]:hover img {
+  transform: rotate(-10deg);
+}
+
+.contact__links {
+  font-size: var(--font-micro);
+}
+
+.contact__description {
+  color: white;
+}
+
+[class^="contact__icon"]:hover .contact__description {
+  color: #995d30;
+}
+
+.contact__rights {
+  padding: 40px 0 0 0;
+  font-size: var(--font-micro);
 }
 
 /* Responsive Design */

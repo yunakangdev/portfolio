@@ -20,10 +20,8 @@ Let's make my own portfolio website!
 #### ETC
 
 - [x] Custom Logo & Icon
-- [ ] Custom Mouse Cursor
 - [x] Mouse Hover Event
 - [x] Image Switch
-- [ ] Background Music
 - [x] Heroku & Domain
 
 ---
