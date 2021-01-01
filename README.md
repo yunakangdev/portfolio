@@ -12,7 +12,6 @@ Let's make my own portfolio website!
 
 - [x] Home
 - [x] About
-- [ ] Education
 - [ ] Skills
 - [ ] Projects
 - [ ] Testimonials
@@ -22,7 +21,7 @@ Let's make my own portfolio website!
 
 - [x] Custom Logo & Icon
 - [ ] Custom Mouse Cursor
-- [ ] Mouse Hover Event
+- [x] Mouse Hover Event
 - [x] Image Switch
 - [ ] Background Music
 - [x] Heroku & Domain
@@ -46,3 +45,5 @@ Let's make my own portfolio website!
 
   2. H20: use boot timeout tool to increase the boot time  
      changed the boot time to 150 seconds
+
+- [ ] 2020/12/31 : change image src on img:hover issue - slow
