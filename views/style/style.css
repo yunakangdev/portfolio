@@ -103,9 +103,17 @@ ul {
   margin: 0 4px;
   cursor: pointer;
 }
+/* 
 
+Option 1. Using HTML + CSS
 .navbar__menu__item.active {
   text-decoration: underline;
+  text-underline-position: under;
+}
+
+/* Option 2. Using CSS */
+.navbar__menu__item:hover {
+  text-decoration: underline solid var(--color-navy) 1.8px;
   text-underline-position: under;
 }
 
