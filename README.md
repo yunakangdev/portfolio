@@ -30,7 +30,7 @@ Let's make my own portfolio website!
 
 ## ISSUE
 
-- [x] 2020/12/28 : Switching images according to the window size using HTML, CSS, JavaScript
+- [x] 2020/12/28 : Switch images according to the window size using HTML, CSS, JavaScript
 
 - [x] 2020/12/30 : Responsive Design for all devices
 
@@ -46,4 +46,12 @@ Let's make my own portfolio website!
   2. H20: use boot timeout tool to increase the boot time  
      changed the boot time to 150 seconds
 
-- [ ] 2020/12/31 : change image src on img:hover issue - slow
+- [x] 2020/12/31 : Switch icons on mouse hover in CSS => too slow
+
+  1. Before : CSS  
+      .class img:hover {
+     content: url('');
+     };
+
+  2. After : HTML  
+     `<img src="" onmouseover="this.src=''" onmouseout="this.src=''">`
