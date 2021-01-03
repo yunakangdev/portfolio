@@ -3,11 +3,9 @@
   /* Color */
   --color-navy: #2b3072;
   --color-sky: #c2dbf2;
-  /* --color-light-sky: #f5ffff; */
   --color-light-grey: #f9f9f9;
   --color-grey: #c9cbdb;
   --color-yellow: #eed672;
-  --color-brown: #995d30;
 
   /* Font size */
   --font-large: 24px;
@@ -311,6 +309,14 @@ Option 1. Using HTML + CSS
   }
 }
 
+/* Projects */
+.category__btn {
+  border: 1px solid var(--color-grey);
+  background: white;
+  font-size: var(--font-small);
+  padding: 8px 36px;
+}
+
 /* Contact */
 .contact__links {
   display: flex;
@@ -337,7 +343,7 @@ Option 1. Using HTML + CSS
 }
 
 [class^="contact__icon"]:hover .contact__description {
-  color: #995d30;
+  color: var(--color-navy);
 }
 
 .contact__rights {
