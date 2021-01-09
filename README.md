@@ -54,3 +54,5 @@ Let's make my own portfolio website!
 
   2. After : HTML => solved  
      `<img src="" onmouseover="this.src=''" onmouseout="this.src=''">`
+
+- [ ] 2020/01/08 : CSS for image slides
