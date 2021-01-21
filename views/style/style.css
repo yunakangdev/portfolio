@@ -378,6 +378,40 @@ Option 1. Using HTML + CSS
   margin-left: -50%;
 }
 
+.navigation-auto {
+  position: absolute;
+  width: 800px;
+  margin-top: -165px;
+  display: flex;
+  margin-left: 30px;
+}
+
+.navigation-auto__btn1,
+.navigation-auto__btn2 {
+  border: 2px solid transparent;
+  background: var(--color-navy);
+  width: 9px;
+  height: 9px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 16px;
+}
+
+#radio1:checked ~ .navigation-auto .navigation-auto__btn1 {
+  border: 2px solid var(--color-navy);
+  background: transparent;
+}
+
+#radio2:checked ~ .navigation-auto .navigation-auto__btn2 {
+  border: 2px solid var(--color-navy);
+  background: transparent;
+}
+
 /* Contact */
 .contact__links {
   display: flex;
