@@ -102,7 +102,7 @@ ul {
   margin: 0 4px;
   cursor: pointer;
 }
-/* 
+/*
 
 Option 1. Using HTML + CSS
 .navbar__menu__item.active {
@@ -315,12 +315,26 @@ Option 1. Using HTML + CSS
 }
 
 .projects__slider {
-  max-width: 800px;
+  width: 800px;
+  height: 500px;
+  overflow: hidden;
+  margin: auto;
 }
 
 .projects__slides {
-  max-width: 200%;
+  width: 200%;
+  height: 500px;
   display: flex;
+  margin: 16px 0;
+}
+
+.projects__slides input {
+  display: none;
+}
+
+.slide {
+  width: 50%;
+  transition: 1s;
 }
 
 .slide img {
@@ -328,20 +342,40 @@ Option 1. Using HTML + CSS
   width: 100%;
 }
 
-[id^="radio"] {
-  border: 2px solid transparent;
-  background: var(--color-navy);
-  width: 10px;
-  height: 10px;
-  outline: none;
-  padding: 0;
-  cursor: pointer;
-  border-radius: 10px;
+.navigation-manual {
+  position: absolute;
+  width: 800px;
+  margin-top: -165px;
+  display: flex;
+  margin-left: 30px;
 }
 
-[id*="active"] {
-  border-color: var(--color-navy);
+.navigation-manual__btn {
+  border: 2px solid transparent;
+  background: var(--color-navy);
+  width: 9px;
+  height: 9px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-manual__btn:not(:last-child) {
+  margin-right: 16px;
+}
+
+.navigation-manual__btn:hover {
+  border: 2px solid var(--color-navy);
   background: transparent;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -50%;
 }
 
 /* Contact */
