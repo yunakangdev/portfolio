@@ -374,8 +374,9 @@ Option 1. Using HTML + CSS
 
 .slide:hover [class^="slide__description"] {
   background: var(--color-navy);
-  opacity: 0.5;
+  opacity: 0.6;
   transition: 1s;
+  cursor: pointer;
 }
 
 .navigation-manual {
@@ -412,6 +413,11 @@ Option 1. Using HTML + CSS
 
 #radio2:checked ~ .first {
   margin-left: -50%;
+}
+
+/* Testimonials */
+#testimonials {
+  background-color: var(--color-sky);
 }
 
 /* Contact */
