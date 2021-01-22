@@ -17,7 +17,6 @@
 //   switchImg();
 // });
 
-// Projects - automatic navigation
 var counter = 1;
 setInterval(function() {
   document.getElementById('radio' + counter).checked = true;
