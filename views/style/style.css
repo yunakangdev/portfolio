@@ -99,19 +99,20 @@ ul {
 
 .navbar__menu__item {
   font-family: "minion pro", sans-serif;
+  font-weight: var(--weight-medium);
   padding: 0px 30px;
   margin: 0 4px;
   cursor: pointer;
 }
-/*
 
+/*
 Option 1. Using HTML + CSS
 .navbar__menu__item.active {
   text-decoration: underline;
   text-underline-position: under;
 }
 
-/* Option 2. Using CSS */
+Option 2. Using CSS */
 .navbar__menu__item:hover {
   text-decoration: underline solid var(--color-navy) 1.8px;
   text-underline-position: under;
@@ -392,12 +393,12 @@ Option 1. Using HTML + CSS
 .navigation-manual__btn {
   border: 2px solid transparent;
   background: var(--color-navy);
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   outline: none;
   cursor: pointer;
-  border-radius: 10px;
-  transition: 1s;
+  border-radius: 8px;
+  transition: 300ms;
 }
 
 .navigation-manual__btn:not(:last-child) {
@@ -407,6 +408,10 @@ Option 1. Using HTML + CSS
 .navigation-manual__btn:hover {
   border: 2px solid var(--color-navy);
   background: transparent;
+  width: 11px;
+  height: 11px;
+  margin-top: -1.5px;
+  margin-left: -1.5px;
 }
 
 #radio1:checked ~ .first {
@@ -417,48 +422,49 @@ Option 1. Using HTML + CSS
   margin-left: -50%;
 }
 
-/* navigation auto */
-.navigation-auto {
-  position: absolute;
-  width: 800px;
-  margin-top: 351px;
-  display: flex;
-  margin-left: 30px;
-}
-
-.navigation-auto div {
-  border: 2px solid transparent;
-  background: var(--color-navy);
-  width: 9px;
-  height: 9px;
-  outline: none;
-  cursor: pointer;
-  border-radius: 10px;
-  transition: 1s;
-}
-
-.navigation-auto div:not(:last-child) {
-  margin-right: 16px;
-}
-
-/* doesn't work */
-#radio1:checked ~ .navigation-auto .navigation-auto__btn1 {
-  border: 2px solid var(--color-navy);
-  background: transparent;
-}
-
-#radio2:checked ~ .navigation-auto .navigation-auto__btn2 {
-  border: 2px solid var(--color-navy);
-  background: transparent;
-}
-
 /* Testimonials */
 #testimonials {
   background-color: var(--color-sky);
 }
 
+.testimonial {
+  display: flex;
+  margin: 20px;
+}
+
 .testimonial__avatar {
   width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.testimonial__avatar:nth-child(odd) {
+  margin-right: 18px;
+}
+
+.testimonial__avatar:nth-child(even) {
+  margin-left: 18px;
+}
+
+.testimonial__speech-bubble {
+  padding: 0 9px;
+  background-color: white;
+}
+
+.testimonial__speech-bubble .name,
+.testimonial__speech-bubble a {
+  font-size: var(--font-small);
+  font-weight: var(--weight-medium);
+}
+
+.bar {
+  color: red;
+  margin: 0 4px;
+}
+
+.testimonial__speech-bubble a:hover {
+  color: white;
+  text-shadow: 0.4px 0.4px var(--color-navy);
 }
 
 /* Contact */
@@ -495,16 +501,6 @@ Option 1. Using HTML + CSS
   font-size: var(--font-micro);
 }
 
-/* Responsive Design */
-/* iPad Pro */
-@media screen and (max-width: 1024px) {
-  #home__image {
-    max-width: 100%;
-    height: 1170px;
-    margin: auto;
-  }
-}
-
 /* iPad */
 @media screen and (max-width: 770px) {
   #navbar__logo__image {
@@ -515,7 +511,7 @@ Option 1. Using HTML + CSS
   .navbar__menu__item {
     padding: 0 14px;
     margin: 0;
-    font-size: 14px;
+    font-size: var(--font-small);
   }
 
   #home__image {
@@ -641,13 +637,8 @@ Option 1. Using HTML + CSS
 
   .navbar__menu__item {
     padding: 0px 9px;
-    font-size: 12px;
+    font-size: var(--font-micro);
   }
-
-  /* #home__image {
-    max-width: 50%;
-    height: 595px;
-  } */
 }
 
 /* Galaxy Fold */
@@ -672,7 +663,7 @@ Option 1. Using HTML + CSS
 
   .navbar__menu__item {
     padding: 0px 6px;
-    font-size: 10px;
+    font-size: var(--font-micro-micro);
   }
 
   #home__image {
