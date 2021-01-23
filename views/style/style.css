@@ -159,6 +159,24 @@ Option 2. Using CSS */
 .major__description {
   max-width: 150px;
   font-size: 0.8em;
+  background-color: var(--color-navy);
+  background-image: linear-gradient(
+    -75deg,
+    transparent 0,
+    transparent 2%,
+    var(--color-blue) 2%,
+    var(--color-blue) 5%,
+    transparent 5%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  transition: 1.8s;
+}
+
+.major__description:hover {
+  background-position: -120% 0%;
 }
 
 /* Skills */
@@ -456,27 +474,6 @@ Option 2. Using CSS */
 .testimonial__speech-bubble a {
   font-size: var(--font-small);
   font-weight: var(--weight-medium);
-}
-
-.testimonial__speech-bubble a {
-  background-color: var(--color-navy);
-  background-image: linear-gradient(
-    -75deg,
-    transparent 0,
-    transparent 2%,
-    var(--color-blue) 2%,
-    var(--color-blue) 5%,
-    transparent 5%,
-    transparent 100%
-  );
-  background-size: 200% 100%;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  transition: 1.8s;
-}
-
-.testimonial__speech-bubble a:hover {
-  background-position: -120% 0%;
 }
 
 .bar {
