@@ -21,7 +21,7 @@
   --weight-medium: 500;
   --weight-regular: 400;
 
-  /* animation */
+  /* Animation */
   --animation-duration: 300ms;
 }
 
@@ -49,6 +49,7 @@ p {
   color: var(--color-navy);
   line-height: 1.5em;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 html {
@@ -77,11 +78,6 @@ ul {
   margin: auto;
 }
 
-.section__container {
-  max-width: 800px;
-  margin: auto;
-}
-
 /* Navbar */
 #navbar {
   display: flex;
@@ -100,7 +96,9 @@ ul {
 
 .navbar__menu__item {
   font-family: "minion pro", sans-serif;
+  transform: scale(1.04, 1.02);
   font-weight: var(--weight-medium);
+  text-shadow: 0.05px 0.05px var(--color-sky);
   padding: 0px 30px;
   margin: 0 4px;
   cursor: pointer;
@@ -124,11 +122,16 @@ Option 2. Using CSS */
 #home__image {
   background: center/cover no-repeat url("../images/home_web.png");
   max-width: 100%;
-  height: 700px;
+  height: 550px;
   margin: auto;
 }
 
 /* About */
+.about__container {
+  max-width: 600px;
+  margin: auto;
+}
+
 .about__majors {
   display: flex;
   max-width: 700px;
@@ -152,6 +155,7 @@ Option 2. Using CSS */
   content: url("../images/db_hover.png");
 } */
 
+/* About - major */
 .major__title {
   padding: 10px;
 }
@@ -183,6 +187,11 @@ Option 2. Using CSS */
 #skills {
   background-color: var(--color-sky);
   font-size: var(--font-small);
+}
+
+#skills .section__container {
+  max-width: 800px;
+  margin: auto;
 }
 
 .skillset {
@@ -337,20 +346,14 @@ Option 2. Using CSS */
 
 .projects__slider {
   width: 800px;
-  height: 400px;
   overflow: hidden;
   margin: auto;
 }
 
 .projects__slides {
   width: 200%;
-  height: 500px;
   display: flex;
   margin: 16px 0;
-}
-
-.projects__slides input {
-  display: none;
 }
 
 .slide {
@@ -365,25 +368,25 @@ Option 2. Using CSS */
   width: 100%;
 }
 
-[class^="slide__description"] {
+.slide__description {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 385px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   opacity: 0;
 }
 
-[class^="slide__description"] h3,
-[class^="slide__description"] span {
+.slide__description h3,
+.slide__description span {
   color: white;
   text-shadow: 0.3px 0.3px var(--color-navy);
 }
 
-[class^="slide__description"] h3:after {
+.slide__description h3:after {
   content: "";
   display: block;
   position: relative;
@@ -394,18 +397,22 @@ Option 2. Using CSS */
   margin: 8px 0;
 }
 
-.slide:hover [class^="slide__description"] {
+.slide:hover .slide__description {
   background: var(--color-navy);
   opacity: 0.6;
   transition: 1s;
   cursor: pointer;
 }
 
-/* navigation manual */
+.projects__slides input {
+  display: none;
+}
+
+/* Navigation manual */
 .navigation-manual {
   position: absolute;
   width: 800px;
-  margin-top: -165px;
+  margin-top: -50px;
   display: flex;
   margin-left: 30px;
 }
@@ -418,7 +425,7 @@ Option 2. Using CSS */
   outline: none;
   cursor: pointer;
   border-radius: 8px;
-  transition: 300ms;
+  transition: Var(--animation-duration);
 }
 
 .navigation-manual__btn:not(:last-child) {
@@ -447,12 +454,21 @@ Option 2. Using CSS */
   background-color: var(--color-sky);
 }
 
+#testimonials .section__container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.testimonials {
+  margin-top: 40px;
+}
+
 .testimonial {
   display: flex;
 }
 
 .testimonial:not(:last-child) {
-  margin: 20px;
+  margin-bottom: 50px;
 }
 
 .testimonial__avatar {
@@ -521,22 +537,38 @@ Option 2. Using CSS */
 
 /* iPad */
 @media screen and (max-width: 770px) {
+  /* Nav */
   #navbar__logo__image {
     width: 120px;
     margin: 20px;
   }
 
   .navbar__menu__item {
-    padding: 0 14px;
+    padding: 0 18px;
     margin: 0;
     font-size: var(--font-small);
   }
 
+  /* Home */
   #home__image {
     background: top/cover no-repeat url("../images/home_mobile.png");
-    max-width: 50%;
-    height: 595px;
+    max-width: 70%;
+    height: 650px;
     margin: auto;
+  }
+
+  /* About */
+  .about__majors {
+    max-width: 500px;
+  }
+
+  #about .section__container {
+    max-width: 500px;
+  }
+
+  /* Skills */
+  #skills .section__container {
+    max-width: 600px;
   }
 
   .skillset__left {
@@ -631,6 +663,24 @@ Option 2. Using CSS */
       height: 3px;
     }
   }
+
+  /* Projects */
+  .projects__slider {
+    max-width: 600px;
+  }
+
+  .slide {
+    height: 72%;
+  }
+
+  .navigation-manual {
+    margin-top: -50px;
+  }
+
+  /* Testimonials */
+  #testimonials .section__container {
+    max-width: 600px;
+  }
 }
 
 /* iPhone */
@@ -688,4 +738,26 @@ Option 2. Using CSS */
     max-width: 30%;
     height: 400px;
   }
+}
+
+/* Jean Kang */
+.contact__rights span {
+  background-color: var(--color-navy);
+  background-image: linear-gradient(
+    -75deg,
+    transparent 0,
+    transparent 2%,
+    var(--color-blue) 2%,
+    var(--color-blue) 5%,
+    transparent 5%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  transition: 1.8s;
+}
+
+.contact__rights:hover span.jean {
+  background-position: -120% 0%;
 }

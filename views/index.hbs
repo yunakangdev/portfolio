@@ -22,7 +22,6 @@
       <a href="#"><img id="navbar__logo__image" src="./images/logo.png"></img></a>
     </div>
     <ul class="navbar__menu">
-      <li class="navbar__menu__item">Home</li>
       <li class="navbar__menu__item">About</li>
       <li class="navbar__menu__item">Skills</li>
       <li class="navbar__menu__item">Projects</li>
@@ -54,16 +53,20 @@
   <!-- Switch Image according to the window size -->
   <!-- Option 3. Using CSS -->
   <section id="home">
-    <div id="home__image"></div>
+    <a href="http://society6.com/orangesage" target="_blank">
+      <div id="home__image"></div>
+    </a>
   </section>
 
   <!-- About -->
-  <section id="about" class="section section__container">
-    <h1>About</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sunt sed laborum, blanditiis
-      sequi mollitia
-      adipisci dolorem, rerum magnam officia porro voluptate fuga molestiae recusandae eligendi iste voluptatem aut
-      quam!</p>
+  <section id="about" class="section">
+    <div class="about__container">
+      <h1>About</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sunt sed laborum, blanditiis
+        sequi mollitia
+        adipisci dolorem, rerum magnam officia porro voluptate fuga molestiae recusandae eligendi iste voluptatem aut
+        quam!</p>
+    </div>
     <div class="about__majors">
       <div class="major">
         <div class="major__icon1"><img src="./images/language.png" onmouseover="this.src='./images/language_hover.png'"
@@ -89,7 +92,7 @@
 
   <!-- Skills -->
   <section id="skills" class="section">
-    <div class="section__container">
+    <div class="skills__container">
       <h1>Skills</h1>
       <p>Lorem ipsum dolor sit amet consectetur
         adipisicing elit.
@@ -193,18 +196,20 @@
         <input type="radio" name="radio-btn" id="radio2"></input>
         <div class="slide first">
           <a href="https://yuna-the-label.herokuapp.com/index" target="_blank"><img src="../images/project1.png"
-              alt="yuna the label"></a>
-          <div class="slide__description">
-            <h3>Yuna the label</h3>
-            <span>A clothing brand Homepage</span>
-          </div>
+              alt="yuna the label">
+            <div class="slide__description">
+              <h3>Yuna the label</h3>
+              <span>A clothing brand Homepage</span>
+            </div>
+          </a>
         </div>
         <div class="slide">
-          <a href="https://ehbnb.herokuapp.com/" target="_blank"><img src="../images/project2.png" alt="ehbnb"></a>
-          <div class="slide__description__two">
-            <h3>Ehbnb</h3>
-            <span>A Canadian vacation rental online marketplace</span>
-          </div>
+          <a href="https://ehbnb.herokuapp.com/" target="_blank"><img src="../images/project2.png" alt="ehbnb">
+            <div class="slide__description">
+              <h3>Ehbnb</h3>
+              <span>A Canadian vacation rental online marketplace</span>
+            </div>
+          </a>
         </div>
       </div>
       <div class="navigation-manual">
@@ -217,30 +222,32 @@
   <!-- Testimonials -->
   <section id="testimonials" class="section">
     <h1>Testimonials</h1>
-    <div class="testimonials">
-      <div class="testimonial">
-        <img src="./images/testimonials/mrelephant.jpg" alt="mr.elephant" class="testimonial__avatar">
-        <div class="testimonial__speech-bubble">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum provident quidem aperiam nesciunt ratione
-            deleniti voluptas fugit et, maiores saepe quos quo voluptatibus? Corrupti, dolorem magni veniam
-            repudiandae
-            error debitis?
-            consequatur officia sequi? Quidem mollitia corporis cum, distinctio amet quasi harum non fugit ipsum aut
-            possimus officia.</p>
-          <p class="name"><a href="">Mr. Elephant</a><span class="bar"> | </span>Company</p>
+    <div class="testimonials__container">
+      <div class="testimonials">
+        <div class="testimonial">
+          <img src="./images/testimonials/mrelephant.jpg" alt="mr.elephant" class="testimonial__avatar">
+          <div class="testimonial__speech-bubble">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum provident quidem aperiam nesciunt ratione
+              deleniti voluptas fugit et, maiores saepe quos quo voluptatibus? Corrupti, dolorem magni veniam
+              repudiandae
+              error debitis?
+              consequatur officia sequi? Quidem mollitia corporis cum, distinctio amet quasi harum non fugit ipsum aut
+              possimus officia.</p>
+            <p class="name"><a href="">Mr. Elephant</a><span class="bar"> | </span>Company</p>
+          </div>
         </div>
-      </div>
-      <div class="testimonial">
-        <div class="testimonial__speech-bubble">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum provident quidem aperiam nesciunt ratione
-            deleniti voluptas fugit et, maiores saepe quos quo voluptatibus? Corrupti, dolorem magni veniam
-            repudiandae
-            error debitis?
-            consequatur officia sequi? Quidem mollitia corporis cum, distinctio amet quasi harum non fugit ipsum aut
-            possimus officia.</p>
-          <p class="name"><a href="">Ms. Rabbit</a><span class="bar"> | </span>Company</p>
+        <div class="testimonial">
+          <div class="testimonial__speech-bubble">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum provident quidem aperiam nesciunt ratione
+              deleniti voluptas fugit et, maiores saepe quos quo voluptatibus? Corrupti, dolorem magni veniam
+              repudiandae
+              error debitis?
+              consequatur officia sequi? Quidem mollitia corporis cum, distinctio amet quasi harum non fugit ipsum aut
+              possimus officia.</p>
+            <p class="name"><a href="">Ms. Rabbit</a><span class="bar"> | </span>Company</p>
+          </div>
+          <img src="./images/testimonials/msrabbit.jpg" alt="ms.rabbit" class="testimonial__avatar">
         </div>
-        <img src="./images/testimonials/msrabbit.jpg" alt="ms.rabbit" class="testimonial__avatar">
       </div>
     </div>
   </section>
@@ -262,7 +269,8 @@
         <div class="contact__description">Email</div>
       </div>
     </div>
-    <div class="contact__rights">2020 Jean-Kang Portfolio · Built by JEAN KANG</div>
+    <div class="contact__rights">2020 <span class="jean">Jean-Kang</span> Portfolio · Built by <span class="jean">JEAN
+        KANG</span></div>
   </section>
 </body>
 
