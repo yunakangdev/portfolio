@@ -127,11 +127,6 @@ Option 2. Using CSS */
 }
 
 /* About */
-.about__container {
-  max-width: 600px;
-  margin: auto;
-}
-
 .about__majors {
   display: flex;
   max-width: 700px;
@@ -561,10 +556,10 @@ Option 2. Using CSS */
   .about__majors {
     max-width: 500px;
   }
-
+  /* 
   .about__container {
     max-width: 500px;
-  }
+  } */
 
   /* 770 Skills */
   .skills__container {
@@ -740,7 +735,7 @@ Option 2. Using CSS */
   }
 }
 
-/* Jean Kang */
+/* Jean */
 .contact__rights span {
   background-color: var(--color-navy);
   background-image: linear-gradient(
