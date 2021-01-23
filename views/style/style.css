@@ -13,6 +13,7 @@
   --font-regular: 16px;
   --font-small: 14px;
   --font-micro: 12px;
+  --font-micro-micro: 10px;
 
   /* Font weight */
   --weight-semi-bold: 600;
@@ -408,16 +409,6 @@ Option 1. Using HTML + CSS
   background: transparent;
 }
 
-#radio1:checked ~ .one {
-  border: 2px solid var(--color-navy);
-  background: transparent;
-}
-
-#radio2:checked ~ .two {
-  border: 2px solid var(--color-navy);
-  background: transparent;
-}
-
 #radio1:checked ~ .first {
   margin-left: 0;
 }
@@ -466,6 +457,10 @@ Option 1. Using HTML + CSS
   background-color: var(--color-sky);
 }
 
+.testimonial__avatar {
+  width: 100px;
+}
+
 /* Contact */
 .contact__links {
   display: flex;
@@ -504,7 +499,8 @@ Option 1. Using HTML + CSS
 /* iPad Pro */
 @media screen and (max-width: 1024px) {
   #home__image {
-    height: 60vw;
+    max-width: 100%;
+    height: 1170px;
     margin: auto;
   }
 }
@@ -524,8 +520,8 @@ Option 1. Using HTML + CSS
 
   #home__image {
     background: top/cover no-repeat url("../images/home_mobile.png");
-    max-width: 100%;
-    height: 180vw;
+    max-width: 50%;
+    height: 595px;
     margin: auto;
   }
 
@@ -648,13 +644,27 @@ Option 1. Using HTML + CSS
     font-size: 12px;
   }
 
-  #home__image {
-    height: 110vh;
-  }
+  /* #home__image {
+    max-width: 50%;
+    height: 595px;
+  } */
 }
 
 /* Galaxy Fold */
 @media screen and (max-width: 280px) {
+  h1 {
+    font-size: var(--font-regular);
+  }
+
+  h3 {
+    font-size: var(--font-small);
+    margin: 0;
+  }
+
+  p {
+    font-size: var(--font-micro);
+  }
+
   #navbar__logo__image {
     width: 90px;
     margin: 16px;
@@ -663,5 +673,10 @@ Option 1. Using HTML + CSS
   .navbar__menu__item {
     padding: 0px 6px;
     font-size: 10px;
+  }
+
+  #home__image {
+    max-width: 30%;
+    height: 400px;
   }
 }
