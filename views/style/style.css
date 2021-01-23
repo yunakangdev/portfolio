@@ -2,6 +2,7 @@
 :root {
   /* Color */
   --color-navy: #2b3072;
+  --color-blue: #6d95c2;
   --color-sky: #c2dbf2;
   --color-light-grey: #f9f9f9;
   --color-grey: #c9cbdb;
@@ -457,14 +458,30 @@ Option 2. Using CSS */
   font-weight: var(--weight-medium);
 }
 
-.bar {
-  color: red;
-  margin: 0 4px;
+.testimonial__speech-bubble a {
+  background-color: var(--color-navy);
+  background-image: linear-gradient(
+    -75deg,
+    transparent 0,
+    transparent 2%,
+    var(--color-blue) 2%,
+    var(--color-blue) 5%,
+    transparent 5%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  transition: 1.8s;
 }
 
 .testimonial__speech-bubble a:hover {
-  color: white;
-  text-shadow: 0.4px 0.4px var(--color-navy);
+  background-position: -120% 0%;
+}
+
+.bar {
+  color: red;
+  margin: 0 4px;
 }
 
 /* Contact */
