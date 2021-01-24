@@ -10,12 +10,11 @@ Let's make my own portfolio website!
 
 #### MENU
 
-- [x] Home
 - [x] About
 - [x] Skills
 - [x] Projects
-- [ ] Testimonials
-- [ ] Contact
+- [x] Testimonials
+- [x] Contact
 
 #### ETC
 
@@ -55,6 +54,8 @@ Let's make my own portfolio website!
   2. After : HTML => solved  
      `<img src="" onmouseover="this.src=''" onmouseout="this.src=''">`
 
-- [x] 2020/01/08 : CSS for image slides
+- [x] 2021/01/08 : CSS for image slides
 
-- [ ] 2020/01/22 : CSS for auto navigation
+- [ ] 2021/01/22 : CSS for auto navigation
+
+- [ ] 2021/01/23 : CSS(max-width for about container)
