@@ -85,6 +85,19 @@ ul {
   align-items: center;
 }
 
+.navbar {
+  display: flex;
+}
+
+.navbar__toggle img {
+  width: 32px;
+  height: 74px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 20px 30px;
+}
+
 #navbar__logo__image {
   width: 170px;
   margin: 30px;
@@ -92,6 +105,7 @@ ul {
 
 .navbar__menu {
   display: flex;
+  display: none;
 }
 
 .navbar__menu__item {
@@ -553,10 +567,15 @@ Option 2. Using CSS */
 }
 
 /* Responsive */
-
 /* iPad */
 @media screen and (max-width: 770px) {
   /* 770 Nav */
+  .navbar__toggle img {
+    width: 24px;
+    height: 58px;
+    margin: 12px 20px;
+  }
+
   #navbar__logo__image {
     width: 120px;
     margin: 20px;
