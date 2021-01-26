@@ -105,21 +105,14 @@ ul {
 
 .navbar__menu {
   display: flex;
-  flex-direction: column;
-  background: var(--color-navy);
-  width: 100vw;
   display: none;
 }
 
 .navbar__menu__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
   font-family: "minion pro", sans-serif;
-  font-size: var(--font-large);
-  font-weight: var(--weight-regular);
-  color: white;
+  transform: scale(1.04, 1.02);
+  font-weight: var(--weight-medium);
+  text-shadow: 0.05px 0.05px var(--color-sky);
   padding: 0px 30px;
   margin: 0 4px;
   cursor: pointer;
@@ -134,7 +127,7 @@ Option 1. Using HTML + CSS
 
 Option 2. Using CSS */
 .navbar__menu__item:hover {
-  text-decoration: underline solid white 1.8px;
+  text-decoration: underline solid var(--color-navy) 1.8px;
   text-underline-position: under;
 }
 
@@ -589,17 +582,16 @@ Option 2. Using CSS */
   }
 
   .navbar__menu {
-    background: white;
+    flex-direction: column;
+    background: var(--color-navy);
   }
 
   .navbar__menu__item {
     padding: 0 18px;
     margin: auto;
     font-size: var(--font-regular);
-    font-weight: var(--weight-medium);
-    color: var(--color-navy);
-    transform: scale(1.04, 1.02);
-    text-shadow: 0.05px 0.05px var(--color-navy);
+    font-weight: var(--weight-regular);
+    color: white;
   }
 
   /* 768 Home */
