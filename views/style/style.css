@@ -673,25 +673,27 @@ Option 2. Using CSS */
   .skills__container p {
     max-width: 400px;
     margin: auto;
-    /* font-size: var(--font-small); */
   }
 
-  .skillset__left .skillset__title {
-    padding-bottom: 6px;
+  .skillset {
+    flex-direction: column;
   }
 
   .skillset__left {
-    flex-basis: 66%;
-    padding: 12px 20px;
+    flex-basis: 0%;
+    padding: 20px 50px;
   }
 
   .skillset__right {
-    padding: 12px 0px;
-    margin-left: -10px;
+    flex-basis: 0%;
+    padding: 20px 0px;
+    margin: -40px 0 0 0;
   }
 
+  .tools,
   .etc {
-    margin-top: 0px;
+    padding: 10px;
+    margin: 0;
   }
 
   .skill__description span,
