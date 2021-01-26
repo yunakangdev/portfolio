@@ -627,9 +627,17 @@ Option 2. Using CSS */
   }
 
   /* 768 Home */
+  * {
+    overflow-x: hidden;
+  }
+
+  [class^="major__icon"] {
+    overflow-y: hidden;
+  }
+
   #home__image {
     background: top/cover no-repeat url("../images/home_mobile.png");
-    max-width: 70%;
+    max-width: 70vw;
     height: 650px;
     margin: auto;
   }
