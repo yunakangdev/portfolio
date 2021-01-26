@@ -638,7 +638,7 @@ Option 2. Using CSS */
   .about__container p {
     max-width: 400px;
     margin: auto;
-    font-size: var(--font-small);
+    /* font-size: var(--font-small); */
   }
 
   .about__majors {
@@ -673,7 +673,11 @@ Option 2. Using CSS */
   .skills__container p {
     max-width: 400px;
     margin: auto;
-    font-size: var(--font-small);
+    /* font-size: var(--font-small); */
+  }
+
+  .skillset__left .skillset__title {
+    padding-bottom: 6px;
   }
 
   .skillset__left {
@@ -794,7 +798,7 @@ Option 2. Using CSS */
   /* 768 Testimonials */
   .testimonials__container p {
     max-width: 600px;
-    font-size: var(--font-small);
+    /* font-size: var(--font-small); */
   }
 }
 
@@ -813,6 +817,17 @@ Option 2. Using CSS */
     font-size: var(--font-small);
   }
 
+  .about__container p,
+  .skills__container p,
+  .testimonials__container p {
+    max-width: 300px;
+    font-size: var(--font-small);
+  }
+
+  .contact__rights {
+    font-size: var(--font-micro-micro);
+  }
+
   #navbar__logo__image {
     width: 110px;
     margin: 15px;
@@ -821,6 +836,14 @@ Option 2. Using CSS */
   .navbar__menu__item {
     padding: 0px 9px;
     font-size: var(--font-micro);
+  }
+
+  #home__image {
+    margin: auto;
+  }
+
+  .projects__slider {
+    max-width: 400px;
   }
 }
 
