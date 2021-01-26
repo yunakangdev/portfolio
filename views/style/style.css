@@ -778,7 +778,7 @@ Option 2. Using CSS */
     }
   }
 
-  /* 770 Projects */
+  /* 768 Projects */
   .projects__slider {
     max-width: 500px;
   }
@@ -791,9 +791,10 @@ Option 2. Using CSS */
     margin-top: -50px;
   }
 
-  /* 770 Testimonials */
-  .testimonials__container {
+  /* 768 Testimonials */
+  .testimonials__container p {
     max-width: 600px;
+    font-size: var(--font-small);
   }
 }
 
