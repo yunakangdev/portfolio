@@ -604,7 +604,13 @@ Option 2. Using CSS */
 
   /* 768 About */
   .about__majors {
-    max-width: 500px;
+    flex-direction: column;
+    justify-content: center;
+    /* max-width: 500px; */
+  }
+
+  .major {
+    margin: auto;
   }
 
   /* 768 Skills */
