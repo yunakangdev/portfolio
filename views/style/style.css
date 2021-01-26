@@ -603,6 +603,13 @@ Option 2. Using CSS */
   }
 
   /* 768 About */
+
+  .about__container p {
+    max-width: 300px;
+    margin: auto;
+    font-size: var(--font-small);
+  }
+
   .about__majors {
     flex-direction: column;
     justify-content: center;
@@ -611,16 +618,40 @@ Option 2. Using CSS */
 
   .major {
     margin: auto;
+    margin-bottom: 10px;
+  }
+
+  [class^="major__icon"] img {
+    width: 70%;
+  }
+
+  .major__icon2 img {
+    margin-bottom: -20px;
+  }
+
+  .major__icon3 img {
+    margin-top: 10px;
+    margin-bottom: -20px;
   }
 
   /* 768 Skills */
   .skills__container {
-    max-width: 600px;
+    max-width: 400px;
+  }
+
+  .skills__container p {
+    max-width: 400px;
+    margin: auto;
+    font-size: var(--font-small);
   }
 
   .skillset__left {
-    flex-basis: 60%;
-    padding: 20px 20px;
+    flex-basis: 64%;
+    padding: 16px 16px;
+  }
+
+  .skillset__title {
+    padding-bottom: 10px;
   }
 
   .skill__description span,
