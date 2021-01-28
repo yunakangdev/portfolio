@@ -451,9 +451,9 @@ Option 2. Using CSS */
 
 /* Navigation manual */
 .navigation-manual {
+  display: flex;
   position: relative;
   width: 100%;
-  display: flex;
   top: -50px;
   left: 30px;
 }
@@ -634,7 +634,7 @@ Option 2. Using CSS */
   /* 768 Home */
   #home__image {
     background: top/cover no-repeat url("../images/home_mobile.png");
-    max-width: 70%;
+    /* max-width: 70%; */
     height: 700px;
     margin: auto;
   }
@@ -646,27 +646,18 @@ Option 2. Using CSS */
   }
 
   .about__majors {
-    flex-direction: column;
+    display: flex;
     justify-content: center;
     padding: 20px 0;
+    font-size: var(--font-small);
   }
 
   .major {
     margin: auto;
-    margin-bottom: 10px;
   }
 
   [class^="major__icon"] img {
-    width: 70%;
-  }
-
-  .major__icon2 img {
-    margin-bottom: -20px;
-  }
-
-  .major__icon3 img {
-    margin-top: 10px;
-    margin-bottom: -20px;
+    width: 60%;
   }
 
   /* 768 Skills */
@@ -812,6 +803,7 @@ Option 2. Using CSS */
   /* 768 Testimonials */
   .testimonials__container p {
     max-width: 600px;
+    font-size: var(--font-small);
   }
 
   .testimonial__avatar {
@@ -825,6 +817,10 @@ Option 2. Using CSS */
 
   .testimonial__avatar:nth-child(even) {
     margin-left: 8px;
+  }
+
+  .testimonial:not(:last-child) {
+    margin-bottom: 18px;
   }
 }
 
@@ -854,6 +850,10 @@ Option 2. Using CSS */
     font-size: var(--font-micro-micro);
   }
 
+  .navbar__toggle img {
+    margin: 3px 10px;
+  }
+
   #navbar__logo__image {
     width: 110px;
     margin: 15px;
@@ -867,6 +867,23 @@ Option 2. Using CSS */
   #home__image {
     max-width: 100%;
     margin: auto;
+  }
+
+  .about__majors {
+    flex-direction: column;
+  }
+
+  .major {
+    margin-bottom: 10px;
+  }
+
+  .major__icon2 img {
+    margin-bottom: -20px;
+  }
+
+  .major__icon3 img {
+    margin-top: 10px;
+    margin-bottom: -20px;
   }
 
   .projects__slider {
@@ -890,7 +907,7 @@ Option 2. Using CSS */
   }
 
   .section {
-    padding: 18px 0px 36px 0px;
+    padding: 18px 0px;
   }
 
   .about__container p,
@@ -899,7 +916,11 @@ Option 2. Using CSS */
   }
 
   .testimonial:not(:last-child) {
-    margin-bottom: 36px;
+    margin-bottom: 18px;
+  }
+
+  .testimonial__speech-bubble p {
+    font-size: var(--font-micro);
   }
 
   #navbar__logo__image {
