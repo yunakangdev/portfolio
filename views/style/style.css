@@ -808,7 +808,19 @@ Option 2. Using CSS */
   /* 768 Testimonials */
   .testimonials__container p {
     max-width: 600px;
-    /* font-size: var(--font-small); */
+  }
+
+  .testimonial__avatar {
+    width: 70px;
+    height: 70px;
+  }
+
+  .testimonial__avatar:nth-child(odd) {
+    margin-right: 8px;
+  }
+
+  .testimonial__avatar:nth-child(even) {
+    margin-left: 8px;
   }
 }
 
