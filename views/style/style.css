@@ -634,7 +634,7 @@ Option 2. Using CSS */
   /* 768 Home */
   #home__image {
     background: top/cover no-repeat url("../images/home_mobile.png");
-    /* max-width: 70%; */
+    max-width: 70%;
     height: 700px;
     margin: auto;
   }
