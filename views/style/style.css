@@ -452,7 +452,6 @@ Option 2. Using CSS */
 /* Navigation manual */
 .navigation-manual {
   position: absolute;
-  width: 800px;
   margin-top: -50px;
   display: flex;
   margin-left: 30px;
@@ -466,7 +465,7 @@ Option 2. Using CSS */
   outline: none;
   cursor: pointer;
   border-radius: 8px;
-  transition: Var(--animation-duration);
+  transition: var(--animation-duration);
 }
 
 .navigation-manual__btn:not(:last-child) {
@@ -601,11 +600,15 @@ Option 2. Using CSS */
 /* Responsive */
 /* iPad */
 @media screen and (max-width: 768px) {
+  .section {
+    padding: 18px;
+  }
+
   /* 768 Nav */
   .navbar__toggle img {
     width: 24px;
     height: 58px;
-    margin: 12px 20px;
+    margin: 8px 20px;
   }
 
   #navbar__logo__image {
@@ -630,7 +633,7 @@ Option 2. Using CSS */
   #home__image {
     background: top/cover no-repeat url("../images/home_mobile.png");
     max-width: 70%;
-    height: 650px;
+    height: 700px;
     margin: auto;
   }
 
@@ -681,13 +684,13 @@ Option 2. Using CSS */
 
   .skillset__left {
     flex-basis: 0%;
-    padding: 20px 50px;
+    padding: 20px;
   }
 
   .skillset__right {
     flex-basis: 0%;
     padding: 20px 0px;
-    margin: -20px 0 0 0;
+    margin: -30px 0 0 0;
   }
 
   .tools,
@@ -853,6 +856,7 @@ Option 2. Using CSS */
   }
 
   #home__image {
+    max-width: 100%;
     margin: auto;
   }
 
@@ -875,6 +879,10 @@ Option 2. Using CSS */
   p {
     font-size: var(--font-micro);
   }
+
+  /* .section {
+    padding: 10px;
+  } */
 
   #navbar__logo__image {
     width: 90px;
