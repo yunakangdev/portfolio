@@ -603,7 +603,7 @@ Option 2. Using CSS */
 /* iPad */
 @media screen and (max-width: 768px) {
   .section {
-    padding: 20px;
+    padding: 20px 20px 50px 20px;
   }
 
   /* 768 Nav */
@@ -685,10 +685,6 @@ Option 2. Using CSS */
     justify-content: space-around;
     padding: 20px 0px;
     margin: -30px 0 0 0;
-  }
-
-  section#skills.section {
-    padding: 20px;
   }
 
   .tools,
