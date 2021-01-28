@@ -505,6 +505,7 @@ Option 2. Using CSS */
 
 .testimonial {
   display: flex;
+  margin: 0 8px;
 }
 
 .testimonial:not(:last-child) {
@@ -601,7 +602,7 @@ Option 2. Using CSS */
 /* iPad */
 @media screen and (max-width: 768px) {
   .section {
-    padding: 18px;
+    padding: 20px;
   }
 
   /* 768 Nav */
@@ -641,13 +642,12 @@ Option 2. Using CSS */
   .about__container p {
     max-width: 400px;
     margin: auto;
-    /* font-size: var(--font-small); */
   }
 
   .about__majors {
     flex-direction: column;
     justify-content: center;
-    /* max-width: 500px; */
+    padding: 20px 0;
   }
 
   .major {
@@ -688,9 +688,15 @@ Option 2. Using CSS */
   }
 
   .skillset__right {
+    display: flex;
     flex-basis: 0%;
+    justify-content: space-around;
     padding: 20px 0px;
     margin: -30px 0 0 0;
+  }
+
+  section#skills.section {
+    padding: 20px;
   }
 
   .tools,
@@ -880,9 +886,18 @@ Option 2. Using CSS */
     font-size: var(--font-micro);
   }
 
-  /* .section {
-    padding: 10px;
-  } */
+  .section {
+    padding: 18px 0px 36px 0px;
+  }
+
+  .about__container p,
+  .skills__container p {
+    max-width: 240px;
+  }
+
+  .testimonial:not(:last-child) {
+    margin-bottom: 36px;
+  }
 
   #navbar__logo__image {
     width: 90px;
@@ -895,7 +910,23 @@ Option 2. Using CSS */
   }
 
   #home__image {
-    max-width: 30%;
-    height: 400px;
+    width: 100%;
+    height: 520px;
+  }
+
+  .skillset__right {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  section#skills.section {
+    padding: 20px;
+  }
+
+  [class^="contact__icon"] img {
+    max-width: 40px;
+  }
+  .contact__links {
+    max-width: 200px;
   }
 }
