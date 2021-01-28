@@ -627,14 +627,6 @@ Option 2. Using CSS */
   }
 
   /* 768 Home */
-  * {
-    overflow-x: hidden;
-  }
-
-  [class^="major__icon"] {
-    overflow-y: hidden;
-  }
-
   #home__image {
     background: top/cover no-repeat url("../images/home_mobile.png");
     max-width: 70%;
@@ -695,7 +687,7 @@ Option 2. Using CSS */
   .skillset__right {
     flex-basis: 0%;
     padding: 20px 0px;
-    margin: -40px 0 0 0;
+    margin: -20px 0 0 0;
   }
 
   .tools,
