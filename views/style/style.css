@@ -96,6 +96,7 @@ ul {
   top: 0;
   left: 0;
   margin: 20px 30px;
+  cursor: pointer;
 }
 
 #navbar__logo__image {
@@ -104,15 +105,13 @@ ul {
 }
 
 .navbar__menu {
-  display: flex;
   display: none;
 }
 
 .navbar__menu__item {
   font-family: "minion pro", sans-serif;
   transform: scale(1.04, 1.02);
-  font-weight: var(--weight-medium);
-  text-shadow: 0.05px 0.05px var(--color-sky);
+  text-shadow: 0.05px 0.05px var(--color-navy);
   padding: 0px 30px;
   margin: 0 4px;
   cursor: pointer;
@@ -611,6 +610,7 @@ Option 2. Using CSS */
     width: 24px;
     height: 58px;
     margin: 8px 20px;
+    cursor: pointer;
   }
 
   #navbar__logo__image {

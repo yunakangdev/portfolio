@@ -17,6 +17,7 @@
 //   switchImg();
 // });
 
+// Slide navigation auto
 var counter = 1;
 setInterval(function() {
   document.getElementById('radio' + counter).checked = true;
@@ -25,3 +26,12 @@ setInterval(function() {
     counter = 1;
   }
 }, 5000);
+
+function menu(elem) {
+  var navbarMenu = document.querySelector('.navbar__menu');
+  if (navbarMenu.style.display == "none") {
+    navbarMenu.style.display = "flex";
+  } else {
+    navbarMenu.style.display = "none";
+  }
+}
