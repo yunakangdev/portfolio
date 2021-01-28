@@ -451,10 +451,11 @@ Option 2. Using CSS */
 
 /* Navigation manual */
 .navigation-manual {
-  position: absolute;
-  margin-top: -50px;
+  position: relative;
+  width: 100%;
   display: flex;
-  margin-left: 30px;
+  top: -50px;
+  left: 30px;
 }
 
 .navigation-manual__btn {
@@ -796,6 +797,7 @@ Option 2. Using CSS */
   /* 768 Projects */
   .projects__slider {
     max-width: 500px;
+    width: 100%;
   }
 
   .slide {
@@ -803,7 +805,8 @@ Option 2. Using CSS */
   }
 
   .navigation-manual {
-    margin-top: -50px;
+    top: -40px;
+    left: 20px;
   }
 
   /* 768 Testimonials */
