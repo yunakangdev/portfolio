@@ -97,6 +97,7 @@ ul {
   left: 0;
   margin: 20px 30px;
   cursor: pointer;
+  position: fixed;
 }
 
 #navbar__logo__image {
@@ -104,17 +105,40 @@ ul {
   margin: 30px;
 }
 
+#navbar__menu {
+  background: var(--color-navy);
+  width: 100%;
+}
+
 .navbar__menu {
-  display: none;
+  display: flex;
+  margin: auto;
 }
 
 .navbar__menu__item {
   font-family: "minion pro", sans-serif;
+  font-size: var(--font-medium);
   transform: scale(1.04, 1.02);
   text-shadow: 0.05px 0.05px var(--color-navy);
   padding: 0px 30px;
-  margin: 0 4px;
+  margin: auto;
   cursor: pointer;
+  color: white;
+}
+
+.menu__transform {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 10px;
+  width: 96px;
+  background: navy;
+  opacity: 0.8;
+}
+
+.menu__item__transform {
+  margin-left: -12px;
+  font-size: var(--font-micro);
 }
 
 /*
@@ -618,17 +642,18 @@ Option 2. Using CSS */
     margin: 20px;
   }
 
-  .navbar__menu {
-    flex-direction: column;
-    background: var(--color-navy);
+  .navbar__menu__item {
+    font-size: var(--font-small);
   }
 
-  .navbar__menu__item {
-    padding: 0 18px;
-    margin: auto;
-    font-size: var(--font-regular);
-    font-weight: var(--weight-regular);
-    color: white;
+  .menu__transform {
+    left: 6px;
+    width: 86px;
+  }
+
+  .menu__item__transform {
+    font-size: var(--font-micro);
+    margin-left: -18px;
   }
 
   /* 768 Home */

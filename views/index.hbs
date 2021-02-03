@@ -18,9 +18,9 @@
 <body>
   <!-- Navbar -->
   <nav id="navbar">
-    <div class="navbar">
+    <div class="navbar__header">
       <!-- Toggle -->
-      <div class="navbar__toggle" onclick="menu(this)">
+      <div class="navbar__toggle" onclick="showHideMenu(this)">
         <img src="./images/toggle.png">
       </div>
       <!-- Logo -->
@@ -29,13 +29,15 @@
       </div>
     </div>
     <!-- Menu -->
-    <ul class="navbar__menu">
-      <li class="navbar__menu__item">About</li>
-      <li class="navbar__menu__item">Skills</li>
-      <li class="navbar__menu__item">Projects</li>
-      <li class="navbar__menu__item">Testimonials</li>
-      <li class="navbar__menu__item">Contact</li>
-    </ul>
+    <div id="navbar__menu">
+      <ul class="navbar__menu">
+        <li class="navbar__menu__item">About</li>
+        <li class="navbar__menu__item">Skills</li>
+        <li class="navbar__menu__item">Projects</li>
+        <li class="navbar__menu__item">Testimonials</li>
+        <li class="navbar__menu__item">Contact</li>
+      </ul>
+    </div>
   </nav>
 
   <!-- Home -->
@@ -61,9 +63,10 @@
   <!-- Switch Image according to the window size -->
   <!-- Option 3. Using CSS -->
   <section id="home">
-    <a href="http://society6.com/orangesage" target="_blank">
+    {{!-- <a href="http://society6.com/orangesage" target="_blank"> --}}
       <div id="home__image"></div>
-    </a>
+      {{!--
+    </a> --}}
   </section>
 
   <!-- About -->

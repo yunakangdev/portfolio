@@ -17,6 +17,8 @@
 //   switchImg();
 // });
 
+'use strict'
+
 // Slide navigation auto
 var counter = 1;
 setInterval(function() {
@@ -27,11 +29,34 @@ setInterval(function() {
   }
 }, 5000);
 
-function menu(elem) {
-  var navbarMenu = document.querySelector('.navbar__menu');
+const navbar = document.querySelector('#navbar');
+const navbarHeight = navbar.getBoundingClientRect().height;
+const navbarMenu = document.querySelector('.navbar__menu');
+const navbarMenuItem = document.querySelectorAll('.navbar__menu__item');
+
+// Show or Hide menu when toggle is clicked
+function showHideMenu(elem) {
   if (navbarMenu.style.display == "none") {
     navbarMenu.style.display = "flex";
   } else {
     navbarMenu.style.display = "none";
   }
 }
+
+// Transform navbar Menu when scrolling
+document.addEventListener('scroll', () => {
+  console.log(window.scrollY);
+
+  if (navbarMenu.style.display === "flex" && window.scrollY > 205) {
+    navbarMenu.classList.add('menu__transform');
+    for (var i = 0; i < navbarMenuItem.length; i++) {
+      navbarMenuItem[i].classList.add('menu__item__transform');
+    }
+  } else {
+    navbarMenu.classList.remove('menu__transform');
+    for (var i = 0; i < navbarMenuItem.length; i++) {
+      navbarMenuItem[i].classList.remove('menu__item__transform');
+    }
+  }
+})
+
