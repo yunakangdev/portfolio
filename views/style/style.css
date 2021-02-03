@@ -108,6 +108,7 @@ ul {
 #navbar__menu {
   background: var(--color-navy);
   width: 100%;
+  z-index: 2;
 }
 
 .navbar__menu {
