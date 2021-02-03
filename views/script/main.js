@@ -34,7 +34,7 @@ const navbarHeight = navbar.getBoundingClientRect().height;
 const navbarMenu = document.querySelector('.navbar__menu');
 const navbarMenuItem = document.querySelectorAll('.navbar__menu__item');
 
-// Show or Hide menu when toggle is clicked
+// Show / hide nav menu when clicking toggle
 function showHideMenu(elem) {
   if (navbarMenu.style.display == "none") {
     navbarMenu.style.display = "flex";
@@ -43,11 +43,11 @@ function showHideMenu(elem) {
   }
 }
 
-// Transform navbar Menu when scrolling
+// Transform nav menu when scrolling
 document.addEventListener('scroll', () => {
   console.log(window.scrollY);
 
-  if (navbarMenu.style.display === "flex" && window.scrollY > 205) {
+  if (navbarMenu.style.display != "none" && window.scrollY > 100) {
     navbarMenu.classList.add('menu__transform');
     for (var i = 0; i < navbarMenuItem.length; i++) {
       navbarMenuItem[i].classList.add('menu__item__transform');
