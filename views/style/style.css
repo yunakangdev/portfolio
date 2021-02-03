@@ -882,8 +882,18 @@ Option 2. Using CSS */
   }
 
   .navbar__menu__item {
-    padding: 0px 9px;
     font-size: var(--font-micro);
+    padding: 0px 9px;
+  }
+
+  .menu__transform {
+    left: 4px;
+    width: 68px;
+  }
+
+  .menu__item__transform {
+    font-size: var(--font-micro-micro);
+    margin-left: 0px;
   }
 
   #home__image {
