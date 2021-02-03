@@ -43,16 +43,14 @@ function showHideMenu(elem) {
   }
 }
 
-// Transform nav menu when scrolling
+// make navbar smaller when scrolling
 document.addEventListener('scroll', () => {
-  console.log(`window.scrollY: ${window.scrollY}`);
-  console.log(`navbar.getBoundingClientRect().height: ${navbarHeight}`);
-
   if (navbarMenu.style.display !== "none" && window.scrollY > navbarHeight) {
+    navbarMenu.style.display = "flex";
     navbarMenu.classList.add('menu__transform');
     for (var i = 0; i < navbarMenuItem.length; i++) {
       navbarMenuItem[i].classList.add('menu__item__transform');
-    }
+    }  
   } else {
     navbarMenu.classList.remove('menu__transform');
     for (var i = 0; i < navbarMenuItem.length; i++) {
