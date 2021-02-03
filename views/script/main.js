@@ -36,7 +36,7 @@ const navbarMenuItem = document.querySelectorAll('.navbar__menu__item');
 
 // Show / hide nav menu when clicking toggle
 function showHideMenu(elem) {
-  if (navbarMenu.style.display == "none") {
+  if (navbarMenu.style.display === "none") {
     navbarMenu.style.display = "flex";
   } else {
     navbarMenu.style.display = "none";
@@ -45,9 +45,10 @@ function showHideMenu(elem) {
 
 // Transform nav menu when scrolling
 document.addEventListener('scroll', () => {
-  console.log(window.scrollY);
+  console.log(`window.scrollY: ${window.scrollY}`);
+  console.log(`navbar.getBoundingClientRect().height: ${navbarHeight}`);
 
-  if (navbarMenu.style.display != "none" && window.scrollY > 100) {
+  if (navbarMenu.style.display !== "none" && window.scrollY > navbarHeight) {
     navbarMenu.classList.add('menu__transform');
     for (var i = 0; i < navbarMenuItem.length; i++) {
       navbarMenuItem[i].classList.add('menu__item__transform');
