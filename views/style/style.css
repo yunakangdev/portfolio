@@ -78,7 +78,7 @@ ul {
   margin: auto;
 }
 
-/* Navbar */
+/* Nav */
 #navbar {
   display: flex;
   flex-direction: column;
@@ -90,14 +90,13 @@ ul {
 }
 
 .navbar__toggle img {
+  position: fixed;
   width: 32px;
   height: 74px;
-  position: absolute;
   top: 0;
   left: 0;
   margin: 20px 30px;
   cursor: pointer;
-  position: fixed;
 }
 
 #navbar__logo__image {
@@ -127,7 +126,7 @@ ul {
   margin: auto;
   cursor: pointer;
   color: white;
-  transition: opacity 300ms ease-in-out;
+  transition: opacity var(--animation-duration) ease-in-out;
 }
 
 .menu__transform {
@@ -146,23 +145,11 @@ ul {
   font-size: var(--font-micro);
 }
 
-.menu__item__transform:first-child {
-  height: 20px;
-}
-
 .menu__item__transform:last-child {
   height: 20px;
   align-items: flex-start;
 }
 
-/*
-Option 1. Using HTML + CSS
-.navbar__menu__item.active {
-  text-decoration: underline;
-  text-underline-position: under;
-}
-
-Option 2. Using CSS */
 .navbar__menu__item:hover {
   text-decoration: underline solid var(--color-navy) 1px;
   text-shadow: 0.05px 0.05px white;
@@ -181,28 +168,13 @@ Option 2. Using CSS */
 /* About */
 .about__majors {
   display: flex;
+  justify-content: space-between;
   max-width: 700px;
   margin: auto;
-  justify-content: space-between;
   padding: 50px 0;
 }
 
-/* Option 1 */
-/* Switch icons on mouse hover => too slow */
-/* CSS */
-/* .major__icon1 img:hover {
-  content: url("../images/language_hover.png");
-}
-
-.major__icon2 img:hover {
-  content: url("../images/framework_hover.png");
-}
-
-.major__icon3 img:hover {
-  content: url("../images/db_hover.png");
-} */
-
-/* About - major */
+/* About (major) */
 .major__title {
   padding: 10px;
 }
@@ -487,7 +459,7 @@ Option 2. Using CSS */
   display: none;
 }
 
-/* Navigation manual */
+/* Projects (Slides manual) */
 .navigation-manual {
   display: flex;
   position: relative;
@@ -615,7 +587,7 @@ Option 2. Using CSS */
   font-size: var(--font-micro);
 }
 
-/* Jean */
+/* Contact (Jean-Kang)*/
 .contact__rights span {
   background-color: var(--color-navy);
   background-image: linear-gradient(
@@ -647,7 +619,7 @@ Option 2. Using CSS */
   border: transparent;
   outline: none;
   opacity: 0;
-  transition: opacity 300ms ease-in;
+  transition: opacity var(--animation-duration) ease-in;
 }
 
 .arrow-up.visible {
@@ -657,8 +629,26 @@ Option 2. Using CSS */
 /* Responsive */
 /* iPad */
 @media screen and (max-width: 768px) {
+  :root {
+    /* 768 Font size */
+    --font-large: 18px;
+    --font-medium: 16px;
+    --font-regular: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+    --font-micro-micro: 8px;
+  }
+
+  /* 768 Section common */
   .section {
-    padding: 20px 20px 50px 20px;
+    padding: 16px;
+  }
+
+  /* 768 Container common */
+  .about__container p,
+  .skills__container p {
+    max-width: 400px;
+    margin: auto;
   }
 
   /* 768 Nav */
@@ -666,7 +656,6 @@ Option 2. Using CSS */
     width: 24px;
     height: 58px;
     margin: 8px 20px;
-    cursor: pointer;
   }
 
   #navbar__logo__image {
@@ -675,18 +664,18 @@ Option 2. Using CSS */
   }
 
   .navbar__menu__item {
+    font-size: var(--font-regular);
     height: 24px;
-    font-size: var(--font-small);
   }
 
   .menu__transform {
-    left: 6px;
     width: 86px;
+    left: 6px;
   }
 
   .menu__item__transform {
+    font-size: var(--font-small);
     height: 18px;
-    font-size: var(--font-micro);
     margin-left: -18px;
   }
 
@@ -695,20 +684,12 @@ Option 2. Using CSS */
     background: top/cover no-repeat url("../images/home_mobile.png");
     max-width: 80%;
     height: 700px;
-    margin: auto;
   }
 
   /* 768 About */
-  .about__container p {
-    max-width: 400px;
-    margin: auto;
-  }
-
   .about__majors {
-    display: flex;
     justify-content: center;
     padding: 20px 0;
-    font-size: var(--font-small);
   }
 
   .major {
@@ -724,11 +705,6 @@ Option 2. Using CSS */
     max-width: 400px;
   }
 
-  .skills__container p {
-    max-width: 400px;
-    margin: auto;
-  }
-
   .skillset {
     flex-direction: column;
   }
@@ -740,8 +716,8 @@ Option 2. Using CSS */
 
   .skillset__right {
     display: flex;
-    flex-basis: 0%;
     justify-content: space-around;
+    flex-basis: 0%;
     padding: 20px 0px;
     margin: -30px 0 0 0;
   }
@@ -750,12 +726,6 @@ Option 2. Using CSS */
   .etc {
     padding: 10px;
     margin: 0;
-  }
-
-  .skill__description span,
-  .tools__list,
-  .etc__list {
-    font-size: var(--font-micro);
   }
 
   .skill__bar,
@@ -858,7 +828,6 @@ Option 2. Using CSS */
   /* 768 Testimonials */
   .testimonials__container p {
     max-width: 600px;
-    font-size: var(--font-small);
   }
 
   .testimonial__avatar {
@@ -887,30 +856,14 @@ Option 2. Using CSS */
 
 /* iPhone */
 @media screen and (max-width: 414px) {
-  h1 {
-    font-size: var(--font-medium);
-  }
-
-  h3 {
-    font-size: var(--font-regular);
-    margin: 0;
-  }
-
-  p {
-    font-size: var(--font-small);
-  }
-
+  /* 414 Container common */
   .about__container p,
   .skills__container p,
   .testimonials__container p {
     max-width: 300px;
-    font-size: var(--font-small);
   }
 
-  .contact__rights {
-    font-size: var(--font-micro-micro);
-  }
-
+  /* 414 Nav */
   .navbar__toggle img {
     margin: 3px 10px;
   }
@@ -921,7 +874,6 @@ Option 2. Using CSS */
   }
 
   .navbar__menu__item {
-    font-size: var(--font-micro);
     padding: 0px 9px;
   }
 
@@ -931,15 +883,15 @@ Option 2. Using CSS */
   }
 
   .menu__item__transform {
-    font-size: var(--font-micro-micro);
     margin-left: 0px;
   }
 
+  /* 414 Home */
   #home__image {
     max-width: 100%;
-    margin: auto;
   }
 
+  /* 414 About */
   .about__majors {
     flex-direction: column;
   }
@@ -957,6 +909,7 @@ Option 2. Using CSS */
     margin-bottom: -20px;
   }
 
+  /* 414 Projects */
   .projects__slider {
     max-width: 400px;
   }
@@ -964,36 +917,28 @@ Option 2. Using CSS */
 
 /* Galaxy Fold */
 @media screen and (max-width: 280px) {
-  h1 {
-    font-size: var(--font-regular);
+  :root {
+    /* 280 Font size */
+    --font-large: 16px;
+    --font-medium: 14px;
+    --font-regular: 12px;
+    --font-small: 10px;
+    --font-micro: 8px;
+    --font-micro-micro: 8px;
   }
 
-  h3 {
-    font-size: var(--font-small);
-    margin: 0;
-  }
-
-  p {
-    font-size: var(--font-micro);
-  }
-
+  /* 280 Section common */
   .section {
     padding: 18px 0px;
   }
 
+  /* 280 Container common */
   .about__container p,
   .skills__container p {
     max-width: 240px;
   }
 
-  .testimonial:not(:last-child) {
-    margin-bottom: 18px;
-  }
-
-  .testimonial__speech-bubble p {
-    font-size: var(--font-micro);
-  }
-
+  /* 280 Nav */
   #navbar__logo__image {
     width: 90px;
     margin: 16px;
@@ -1001,14 +946,15 @@ Option 2. Using CSS */
 
   .navbar__menu__item {
     padding: 0px 6px;
-    font-size: var(--font-micro-micro);
   }
 
+  /* 280 Home */
   #home__image {
     width: 100%;
     height: 520px;
   }
 
+  /* 280 Skills */
   .skillset__right {
     display: flex;
     justify-content: space-around;
@@ -1018,6 +964,12 @@ Option 2. Using CSS */
     padding: 20px;
   }
 
+  /* 280 Testimonials */
+  .testimonial:not(:last-child) {
+    margin-bottom: 18px;
+  }
+
+  /* 280 Contact */
   [class^="contact__icon"] img {
     max-width: 40px;
   }
