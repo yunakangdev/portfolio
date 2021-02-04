@@ -108,7 +108,7 @@ ul {
 #navbar__menu {
   background: var(--color-navy);
   width: 100%;
-  z-index: 2;
+  z-index: 1;
 }
 
 .navbar__menu {
@@ -120,7 +120,6 @@ ul {
   font-family: "minion pro", sans-serif;
   font-size: var(--font-medium);
   transform: scale(1.04, 1.02);
-  text-shadow: 0.05px 0.05px var(--color-navy);
   padding: 0px 30px;
   margin: auto;
   cursor: pointer;
@@ -151,7 +150,8 @@ Option 1. Using HTML + CSS
 
 Option 2. Using CSS */
 .navbar__menu__item:hover {
-  text-decoration: underline solid var(--color-navy) 1.8px;
+  text-decoration: underline solid var(--color-navy) 1px;
+  text-shadow: 0.05px 0.05px white;
   text-underline-position: under;
 }
 

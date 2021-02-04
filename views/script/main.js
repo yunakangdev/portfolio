@@ -59,12 +59,16 @@ document.addEventListener('scroll', () => {
   }
 })
 
-// Add active when clicking
-function navMenuActive(elem) {
-  elem.classList.add('active');
-}
-
 // Handle scrolling when tapping on the navbar menu
-navbarMenuItem.addEventListener('click', (event) => {
-  console.log(`event.target: ${event.target}`);
+navbarMenu.addEventListener('click', (event) => {
+  const target = event.target;
+  const link = target.dataset.link;
+
+  if (link == null) {
+    return;
+  }
+  console.log(`event.target.dataset.link: ${link}`);
+  const scrollTo = document.querySelector(link);
+  scrollTo.scrollIntoView({ behavior: 'smooth'});
 });
+
