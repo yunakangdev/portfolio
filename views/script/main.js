@@ -74,3 +74,18 @@ function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({ behavior: 'smooth'});  
 }
+
+const navbarBackground = document.querySelector('#navbar__menu');
+
+// Make nav menu fade in / out as the window scrolls down
+document.addEventListener('scroll', () => {
+  console.log(`window.scrollY: ${window.scrollY}`);
+  console.log(`navbarHeight: ${navbarHeight}`);
+  console.log(`opacity: ${navbarBackground.style.opacity}`);
+
+  if (window.scrollY < navbarHeight) {
+  navbarBackground.style.opacity = 1 - window.scrollY / navbarHeight;
+  } else {
+  navbarBackground.style.opacity = 0 + (window.scrollY - navbarHeight) / 150;
+  }
+});

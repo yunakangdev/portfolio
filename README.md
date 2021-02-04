@@ -111,3 +111,17 @@ Let's make my own portfolio website!
 
 - [x] 2021/02/04 : CSS(nav menu has to be on top always)  
        => z-index: 1
+
+- [x] herokup pre-receive hook declined error after installing React
+  1. delete cache  
+     heroku config:set NODE_MODULES_CASCHE=false
+  2. check if versions of node / npm
+     match engines in node_modules  
+      => node -v  
+      => npm -v  
+      => "engines": {
+     "node": "v14.6.0",
+     "npm": "6.14.7"
+     },
+
+  3.
