@@ -147,7 +147,6 @@ ul {
 
 .menu__item__transform:last-child {
   height: 20px;
-  align-items: flex-start;
 }
 
 .navbar__menu__item:hover {
@@ -874,6 +873,7 @@ ul {
   }
 
   .navbar__menu__item {
+    font-size: var(--font-small);
     padding: 0px 9px;
   }
 
@@ -883,6 +883,7 @@ ul {
   }
 
   .menu__item__transform {
+    font-size: var(--font-micro);
     margin-left: 0px;
   }
 
