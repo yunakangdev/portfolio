@@ -35,7 +35,7 @@ const navbarMenu = document.querySelector('.navbar__menu');
 const navbarMenuItem = document.querySelectorAll('.navbar__menu__item');
 
 // Show or hide nav menu when clicking toggle
-function showHideMenu(elem) {
+function showHideMenu() {
   if (navbarMenu.style.display === "none") {
     navbarMenu.style.display = "flex";
   } else {
@@ -46,7 +46,6 @@ function showHideMenu(elem) {
 // Make navbar smaller when scrolling
 document.addEventListener('scroll', () => {
   if (navbarMenu.style.display !== "none" && window.scrollY > navbarHeight) {
-    navbarMenu.style.display = "flex";
     navbarMenu.classList.add('menu__transform');
     for (var i = 0; i < navbarMenuItem.length; i++) {
       navbarMenuItem[i].classList.add('menu__item__transform');
@@ -67,7 +66,6 @@ navbarMenu.addEventListener('click', (event) => {
   if (link == null) {
     return;
   }
-  console.log(`event.target.dataset.link: ${link}`);
   const scrollTo = document.querySelector(link);
   scrollTo.scrollIntoView({ behavior: 'smooth'});
 });

@@ -29,8 +29,10 @@ Let's make my own portfolio website!
 
 - [x] 2020/12/28 : Switch images according to the window size using HTML, CSS, JavaScript
 
-- [ ] 2020/12/30 : Responsive Design for all devices
-      => Iphone 59% issue
+- [x] 2020/12/30 : Responsive Design for all devices
+
+  1. Set parents' width to 100% and set child's smaller than that
+  2. Set margin: auto.
 
 - [x] 2020/12/30 : Heroku Application Error
 
@@ -56,6 +58,56 @@ Let's make my own portfolio website!
 
 - [x] 2021/01/08 : CSS for image slides
 
-- [ ] 2021/01/22 : CSS for auto navigation
+- [x] 2021/01/22 : CSS for auto navigation
 
 - [ ] 2021/01/23 : CSS(max-width for about container)
+
+- [x] 2021/01/28 : CSS(space on the right side on mobile)
+
+  1. Comment out div one by one and check which div is the problem
+  2. Check if any div is set to the width that is bigger than its parents(or the mobile width)
+
+- [x] 2021/02/03 : JS + CSS(show nav menu when clicking toggle)
+
+  1. set onClick=showHideMenu() to the toggle to run the function when the toggle is clicked
+  2. create function showHideMenu(){} and show nav menu if it's hidden
+
+     if (~.style.display === "none") {  
+     ~.style.display = "flex";  
+     }
+
+- [x] 2021/02/04 : JS + CSS(transform nav menu when scrolling down)
+
+  1. window.scrollY;
+  2. const navbarHeight = navbar.getBoundingClientRect().height;
+  3. add an addEventListener to the document to make an event when scrolling
+  4. if the nav menu is not hidden and the scrollY is bigger than the navbarHeight, add a new class to transform the nav menu
+  5. remove the class
+
+  document.addEventListener('scroll', () => {  
+   if (navbarMenu.style.display !== "none" && window.scrollY > navbarHeight) {  
+   navbarMenu.classList.add('transform');  
+   } else {  
+   navbarMenu.classList.remove('transform');  
+   }  
+  })
+
+- [x] 2021/02/04 : JS + CSS(scrolling down when the nav menu is clicked)
+
+  1. add an addEventListener to navbarMenu to scroll down to each section when the click event happens on the navbarMenu
+  2. add data-link="#each section's id" to navbarMenuItems
+  3. now when the event happens(the navbarMenu is clicked), its event.target(navbarMenuItem) saves its data-link values to event.target.dataset.link
+  4. thus, we can check if the navbarMenuItem is clicked by checking the link
+  5. if the navbarMenuItem is clicked, it will have each section's id as their data-link
+  6. when the navbarMenuItem is clicked, call the scrollIntoView on the link to scroll down to each section
+
+  navbarMenu.addEventListener('click', (event) => {  
+   const target = event.target;  
+  const link = target.dataset.link;
+
+  if (link == null) {  
+   return;  
+   }  
+   const scrollTo = document. querySelector(link);  
+   scrollTo.scrollIntoView();  
+  })
