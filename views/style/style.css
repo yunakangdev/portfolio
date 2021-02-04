@@ -145,6 +145,11 @@ ul {
   font-size: var(--font-micro);
 }
 
+.menu__item__transform:last-child {
+  height: 20px;
+  align-items: flex-start;
+}
+
 /*
 Option 1. Using HTML + CSS
 .navbar__menu__item.active {
