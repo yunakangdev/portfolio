@@ -19,7 +19,7 @@
 
 'use strict';
 
-// Slide navigation auto
+// Change slides automatically
 var counter = 1;
 setInterval(function() {
   document.getElementById('radio' + counter).checked = true;
@@ -34,7 +34,7 @@ const navbarHeight = navbar.getBoundingClientRect().height;
 const navbarMenu = document.querySelector('.navbar__menu');
 const navbarMenuItem = document.querySelectorAll('.navbar__menu__item');
 
-// Show or hide nav menu when clicking toggle
+// Show or hide the nav menu when clicking toggle
 function showHideMenu() {
   if (navbarMenu.style.display === "none") {
     navbarMenu.style.display = "flex";
@@ -43,7 +43,7 @@ function showHideMenu() {
   }
 }
 
-// Make navbar smaller when scrolling
+// Make the nav menu smaller when scrolling
 document.addEventListener('scroll', () => {
   if (navbarMenu.style.display !== "none" && window.scrollY > navbarHeight) {
     navbarMenu.classList.add('menu__transform');
@@ -58,7 +58,7 @@ document.addEventListener('scroll', () => {
   }
 })
 
-// Handle scrolling when tapping on the navbar menu
+// Handle scrolling when tapping on the nav menu
 navbarMenu.addEventListener('click', (event) => {
   const target = event.target;
   const link = target.dataset.link;
@@ -69,7 +69,7 @@ navbarMenu.addEventListener('click', (event) => {
   scrollIntoView(link);
 });
 
-// Scroll into View of the selector
+// Scroll into view of the selector
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({ behavior: 'smooth'});  
@@ -77,15 +77,35 @@ function scrollIntoView(selector) {
 
 const navbarBackground = document.querySelector('#navbar__menu');
 
-// Make nav menu fade in / out as the window scrolls down
+// Make the nav menu fade in / out as the window scrolls down
 document.addEventListener('scroll', () => {
-  console.log(`window.scrollY: ${window.scrollY}`);
-  console.log(`navbarHeight: ${navbarHeight}`);
-  console.log(`opacity: ${navbarBackground.style.opacity}`);
-
   if (window.scrollY < navbarHeight) {
   navbarBackground.style.opacity = 1 - window.scrollY / navbarHeight;
   } else {
   navbarBackground.style.opacity = 0 + (window.scrollY - navbarHeight) / 150;
   }
 });
+
+const arrowUp = document.querySelector('.arrow-up');
+
+// Show arrow up button when scrolling down
+document.addEventListener('scroll', () => {
+  if(window.scrollY >= navbarHeight) {
+    arrowUp.style.opacity = 0 + (window.scrollY - navbarHeight) / 150;
+    arrowUp.classList.add('visible');
+  } else {
+    arrowUp.style.opacity = 0;
+    arrowUp.classList.remove('visible');
+  }
+});
+
+// Scrolling up when clicking the arrow up button
+arrowUp.addEventListener('click', (event) => {
+  const target = event.target;
+  const link = target.dataset.link;
+
+  if (link == null) {
+    return;
+  }
+  scrollIntoView(link);
+})

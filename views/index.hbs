@@ -31,7 +31,7 @@
     <!-- Menu -->
     <div id="navbar__menu">
       <ul class="navbar__menu">
-        <li class="navbar__menu__item" data-link="#navbar">Home</li>
+        {{!-- <li class="navbar__menu__item" data-link="#navbar">Home</li> --}}
         <li class="navbar__menu__item" data-link="#about">About</li>
         <li class="navbar__menu__item" data-link="#skills">Skills</li>
         <li class="navbar__menu__item" data-link="#projects">Projects</li>
@@ -64,9 +64,10 @@
   <!-- Switch Image according to the window size -->
   <!-- Option 3. Using CSS -->
   <section id="home">
-    <a href="http://society6.com/orangesage" target="_blank">
+    {{!-- <a href="http://society6.com/orangesage" target="_blank"> --}}
       <div id="home__image"></div>
-    </a>
+      {{!--
+    </a> --}}
   </section>
 
   <!-- About -->
@@ -285,6 +286,11 @@
     <div class="contact__rights">2020 <span class="jean">Jean-Kang</span> Portfolio · Built by <span class="jean">JEAN
         KANG</span></div>
   </section>
+
+  <!-- Arrow up -->
+  <button class="arrow-up">
+    <i class="fas fa-chevron-up" data-link="#navbar"></i>
+  </button>
 </body>
 
 </html>

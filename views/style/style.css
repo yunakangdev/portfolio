@@ -127,6 +127,7 @@ ul {
   margin: auto;
   cursor: pointer;
   color: white;
+  transition: opacity 300ms ease-in-out;
 }
 
 .menu__transform {
@@ -141,8 +142,12 @@ ul {
 
 .menu__item__transform {
   height: 18px;
-  margin-left: -12px;
+  margin-left: -13px;
   font-size: var(--font-micro);
+}
+
+.menu__item__transform:first-child {
+  height: 20px;
 }
 
 .menu__item__transform:last-child {
@@ -632,6 +637,23 @@ Option 2. Using CSS */
   background-position: -120% 0%;
 }
 
+/* Arrow up */
+.arrow-up {
+  position: fixed;
+  font-size: 20px;
+  bottom: 50px;
+  right: 30px;
+  background: transparent;
+  border: transparent;
+  outline: none;
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
+.arrow-up.visible {
+  cursor: pointer;
+}
+
 /* Responsive */
 /* iPad */
 @media screen and (max-width: 768px) {
@@ -854,6 +876,12 @@ Option 2. Using CSS */
 
   .testimonial:not(:last-child) {
     margin-bottom: 18px;
+  }
+
+  /* 768 Arrow up */
+  .arrow-up {
+    font-size: 16px;
+    right: 20px;
   }
 }
 
