@@ -17,7 +17,7 @@
 //   switchImg();
 // });
 
-'use strict'
+'use strict';
 
 // Slide navigation auto
 var counter = 1;
@@ -34,7 +34,7 @@ const navbarHeight = navbar.getBoundingClientRect().height;
 const navbarMenu = document.querySelector('.navbar__menu');
 const navbarMenuItem = document.querySelectorAll('.navbar__menu__item');
 
-// Show / hide nav menu when clicking toggle
+// Show or hide nav menu when clicking toggle
 function showHideMenu(elem) {
   if (navbarMenu.style.display === "none") {
     navbarMenu.style.display = "flex";
@@ -43,7 +43,7 @@ function showHideMenu(elem) {
   }
 }
 
-// make navbar smaller when scrolling
+// Make navbar smaller when scrolling
 document.addEventListener('scroll', () => {
   if (navbarMenu.style.display !== "none" && window.scrollY > navbarHeight) {
     navbarMenu.style.display = "flex";
@@ -59,3 +59,12 @@ document.addEventListener('scroll', () => {
   }
 })
 
+// Add active when clicking
+function navMenuActive(elem) {
+  elem.classList.add('active');
+}
+
+// Handle scrolling when tapping on the navbar menu
+navbarMenuItem.addEventListener('click', (event) => {
+  console.log(`event.target: ${event.target}`);
+});
