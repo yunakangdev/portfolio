@@ -58,7 +58,7 @@ h1 {
   font-family: "minion pro", sans-serif;
   font-size: var(--font-large);
   font-weight: var(--weight-semi-bold);
-  margin: 0px 0px 50px 0px;
+  margin: 0px 0px 60px 0px;
 }
 
 h3 {
@@ -70,12 +70,13 @@ h3 {
 p {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
+  text-align: left;
 }
 
 /* Section common */
 .section {
   text-align: center;
-  padding: 50px;
+  padding: 60px;
   margin: auto;
 }
 
@@ -175,7 +176,7 @@ p {
   justify-content: space-between;
   max-width: 700px;
   margin: auto;
-  padding: 32px 0px 12px 0px;
+  padding: 50px 0px 32px 0px;
 }
 
 /* About (major) */
@@ -219,7 +220,8 @@ p {
 
 .skillset {
   display: flex;
-  margin-top: 50px;
+  margin-top: 60px;
+  margin-bottom: 16px;
   background-color: white;
 }
 
@@ -524,23 +526,24 @@ p {
   border-radius: 50%;
 }
 
-.testimonial__avatar:nth-child(odd) {
+.testimonial__avatar.first {
   margin-right: 18px;
 }
 
-.testimonial__avatar:nth-child(even) {
+.testimonial__avatar.second {
   margin-left: 18px;
 }
 
 .testimonial__speech-bubble {
-  padding: 0 9px;
+  padding: 0px 18px 4px 18px;
   background-color: white;
 }
 
 .testimonial__speech-bubble .name,
 .testimonial__speech-bubble a {
-  font-size: var(--font-small);
+  font-size: var(--font-micro);
   font-weight: var(--weight-medium);
+  text-align: center;
 }
 
 .bar {
@@ -624,27 +627,9 @@ p {
 /* iPad */
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
-  :root {
-    /* 768 Font size */
-    --font-large: 18px;
-    --font-medium: 16px;
-    --font-regular: 14px;
-    --font-small: 12px;
-    --font-micro: 10px;
-    --font-micro-micro: 8px;
-  }
   /* 768 Typography */
   h1 {
     margin: 0px 0px 32px 0px;
-  }
-
-  /* 768 Container common */
-  .section {
-    padding: 32px;
-  }
-
-  .section#about {
-    padding-top: 0px;
   }
 
   /* 768 Nav */
@@ -660,7 +645,7 @@ p {
   }
 
   .navbar__menu__item {
-    font-size: var(--font-regular);
+    font-size: var(--font-small);
     height: 24px;
   }
 
@@ -670,7 +655,7 @@ p {
   }
 
   .menu__item__transform {
-    font-size: var(--font-small);
+    font-size: var(--font-micro);
     height: 18px;
     margin-left: -18px;
   }
@@ -819,6 +804,10 @@ p {
   }
 
   /* 768 Testimonials */
+  /* .section#testimonials {
+    padding-bottom: 50px;
+  } */
+
   .testimonials__container p {
     max-width: 600px;
   }
@@ -826,18 +815,6 @@ p {
   .testimonial__avatar {
     width: 70px;
     height: 70px;
-  }
-
-  .testimonial__avatar:nth-child(odd) {
-    margin-right: 8px;
-  }
-
-  .testimonial__avatar:nth-child(even) {
-    margin-left: 8px;
-  }
-
-  .testimonial:not(:last-child) {
-    margin-bottom: 32px;
   }
 
   /* 768 Contact */
@@ -854,6 +831,21 @@ p {
 
 /* iPhone */
 @media screen and (max-width: 414px) {
+  :root {
+    /* Font size */
+    --font-large: 18px;
+    --font-medium: 16px;
+    --font-regular: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+    --font-micro-micro: 8px;
+  }
+
+  /* 768 Section common */
+  .section {
+    padding: 32px;
+  }
+
   /* 414 Container common */
   .about__container p,
   .skills__container p,
