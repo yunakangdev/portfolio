@@ -884,7 +884,6 @@ p {
   }
 
   /* 414 About */
-
   .section#about {
     padding-bottom: 16px;
   }
@@ -926,8 +925,35 @@ p {
   }
 
   /* 414 Testimonials */
+  .testimonial {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  #testimonials h1 {
+    margin: 0px 0px 16px 0px;
+  }
+
+  .testimonial:last-child {
+    flex-direction: column-reverse;
+  }
+
+  .testimonial:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
   .testimonial p {
     font-size: var(--font-small);
+  }
+
+  .testimonial__avatar.first {
+    margin-right: 250px;
+    margin-bottom: 8px;
+  }
+
+  .testimonial__avatar.second {
+    margin-left: 250px;
+    margin-bottom: 8px;
   }
 }
 
