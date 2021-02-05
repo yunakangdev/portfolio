@@ -119,6 +119,7 @@ p {
 
 .navbar__menu__item {
   display: flex;
+  flex-direction: row;
   align-items: center;
   height: 28px;
   font-family: "minion pro", sans-serif;
@@ -129,6 +130,13 @@ p {
   cursor: pointer;
   color: white;
   transition: opacity var(--animation-duration) ease-in-out;
+}
+
+.navbar__menu__item.active {
+  text-decoration: underline solid var(--color-navy) 1px;
+  font-weight: 100px;
+  text-shadow: 0.05px 0.05px white;
+  text-underline-position: under;
 }
 
 .menu__transform {
