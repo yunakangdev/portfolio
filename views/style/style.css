@@ -920,6 +920,15 @@ p {
     width: 6px;
     height: 6px;
   }
+
+  .navigation-manual__btn:not(:last-child) {
+    margin-right: 14px;
+  }
+
+  /* 414 Testimonials */
+  .testimonial p {
+    font-size: var(--font-small);
+  }
 }
 
 /* Galaxy Fold */
