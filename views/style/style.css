@@ -644,6 +644,10 @@ p {
     margin: 20px;
   }
 
+  .navbar__menu {
+    display: none;
+  }
+
   .navbar__menu__item {
     font-size: var(--font-small);
     height: 24px;
@@ -934,8 +938,8 @@ p {
     margin: 0px 0px 16px 0px;
   }
 
-  .testimonial:last-child {
-    flex-direction: column-reverse;
+  .testimonial__speech-bubble {
+    order: 1;
   }
 
   .testimonial:not(:last-child) {
