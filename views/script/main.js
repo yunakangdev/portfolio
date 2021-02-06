@@ -92,42 +92,62 @@ arrowUp.addEventListener('click', (event) => {
 })
 
 // Make each nav menu Active when each section is shown
-// 1. Bring each sections and nav menu items
-// 2. InsersectionObserver => make it observe all the sections
-// 3. Make each nav menu active when the section is shown
-
 const sectionIds = [
-  '#home',
   '#about',
   '#skills',
-  '#work',
+  '#projects',
   '#testimonials',
   '#contact',
 ];
 
 const sections = sectionIds.map(id => document.querySelector(id));
-const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"]`));
+const navItems = sectionIds.map(id => 
+    document.querySelector(`[data-link="${id}"]`)
+);
 
-console.log(`sections: ${sections}`); 
-console.log(`navItems: ${navItems}`);
+let selectedNavIndex = 0;
+let selectedNavItem = navItems[0];
 
-const callback = (entries, observer) => {
-  entries.forEach(entry => {
-    const target = entry.target;
-    const link = target.dataset.link;
-    console.log(`entry.target: ${target}`);
-    console.log(`target.dataset.link: ${link}`);
+function selectNavItem(selectedNavIndex) {
+  console.log("selectedNavItem(old)");
+  console.log(selectedNavItem);
 
-    const navItem = document.querySelector(`[data-link="${link}"]`);
-    navItem.classList.add('active');
-  })
+  console.log("selectedNavIndex");
+  console.log(selectedNavIndex);
+
+  if (selectedNavItem) {
+    selectedNavItem.classList.remove('active');
+  } 
+
+  console.log("selectedNavItem = navItems[selectedNavIndex]");
+  selectedNavItem = navItems[selectedNavIndex];
+
+  console.log("selectedNavItem(new)");
+  console.log(selectedNavItem);
+
+  selectedNavItem.classList.add('active');  
 }
 
-const options = {
+const observerOptions = {
   root: null,
   rootMargin: '0px',
   threshold: 0.3,
-}
+};
 
-const observer = new IntersectionObserver(callback, options);
+const observerCallback = (entries, observer) => {
+  entries.forEach((entry) => {
+    if(!entry.isIntersecting && entry.intersectionRatio > 0) {
+      const passingEntryIndex = sectionIds.indexOf(`#${entry.target.id}`);
+
+      if(entry.boundingClientRect.y < 0) {
+        selectedNavIndex = passingEntryIndex + 1;
+      } else {
+        selectedNavIndex = passingEntryIndex - 1;
+      }
+      selectNavItem(selectedNavIndex);
+    }
+  });
+};
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
 sections.forEach(section => observer.observe(section));
