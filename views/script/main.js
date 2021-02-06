@@ -90,3 +90,44 @@ arrowUp.addEventListener('click', (event) => {
   }
   scrollIntoView(link);
 })
+
+// Make each nav menu Active when each section is shown
+// 1. Bring each sections and nav menu items
+// 2. InsersectionObserver => make it observe all the sections
+// 3. Make each nav menu active when the section is shown
+
+const sectionIds = [
+  '#home',
+  '#about',
+  '#skills',
+  '#work',
+  '#testimonials',
+  '#contact',
+];
+
+const sections = sectionIds.map(id => document.querySelector(id));
+const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"]`));
+
+console.log(`sections: ${sections}`); 
+console.log(`navItems: ${navItems}`);
+
+const callback = (entries, observer) => {
+  entries.forEach(entry => {
+    const target = entry.target;
+    const link = target.dataset.link;
+    console.log(`entry.target: ${target}`);
+    console.log(`target.dataset.link: ${link}`);
+
+    const navItem = document.querySelector(`[data-link="${link}"]`);
+    navItem.classList.add('active');
+  })
+}
+
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.3,
+}
+
+const observer = new IntersectionObserver(callback, options);
+sections.forEach(section => observer.observe(section));
