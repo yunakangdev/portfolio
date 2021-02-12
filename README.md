@@ -1,7 +1,5 @@
 ## 📝 PROJECT
 
-Let's make my own portfolio website!
-
 #### https://jean-kang.herokuapp.com/
 
 ---
