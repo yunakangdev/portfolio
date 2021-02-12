@@ -126,3 +126,5 @@ Let's make my own portfolio website!
      },
 
   3. set ~ to true
+
+  - [ ] 2021/02/12 : animation performance issue
