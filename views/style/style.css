@@ -53,6 +53,10 @@ ul {
   margin: 0;
 }
 
+.tab {
+  text-indent: 20px;
+}
+
 /* Typography */
 h1 {
   font-family: "minion pro", sans-serif;
@@ -175,7 +179,7 @@ p {
 }
 
 /* About */
-.about__container p {
+.about__container {
   margin: auto;
 }
 
@@ -213,6 +217,11 @@ p {
 
 .major__description:hover {
   background-position: -120% 0%;
+}
+/* Education */
+.education__container {
+  text-align: left;
+  margin-left: 30vw;
 }
 
 /* Skills */
@@ -329,7 +338,7 @@ p {
 
 @keyframes improving2 {
   50% {
-    width: 68%;
+    width: 78%;
     background: var(--color-yellow);
   }
 
@@ -359,7 +368,7 @@ p {
 
 @keyframes improving5 {
   50% {
-    width: 28%;
+    width: 68%;
     background: var(--color-yellow);
   }
 
@@ -680,6 +689,10 @@ p {
   }
 
   /* 768 About */
+  .about__container p {
+    font-size: 14px;
+  }
+
   .about__majors {
     justify-content: center;
   }
@@ -816,12 +829,9 @@ p {
   }
 
   /* 768 Testimonials */
-  /* .section#testimonials {
-    padding-bottom: 50px;
-  } */
-
   .testimonials__container p {
     max-width: 600px;
+    font-size: 14px;
   }
 
   .testimonial__avatar {
