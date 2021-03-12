@@ -1,10 +1,12 @@
-## 📝 PROJECT
+## 📑 PROJECT
+
+My portfolio website
 
 #### https://jean-kang.herokuapp.com/
 
 ---
 
-## PLAN
+## 📎 PLAN
 
 #### MENU
 
@@ -23,7 +25,7 @@
 
 ---
 
-## ISSUE
+## 💡 PROBLEM SOLVING HISTORY
 
 - [x] 2020/12/28 : Switch images according to the window size using HTML, CSS, JavaScript
 
@@ -76,36 +78,36 @@
 
 - [x] 2021/02/04 : JS + CSS(transform nav menu when scrolling down)
 
-  1. window.scrollY;
-  2. const navbarHeight = navbar.getBoundingClientRect().height;
+  1.  window.scrollY;
+  2.  const navbarHeight = navbar.getBoundingClientRect().height;
 
-  document.addEventListener('scroll', () => {  
-   if (navbarMenu.style.display !== "none" && window.scrollY > navbarHeight) {  
-   navbarMenu.classList.add('transform');  
-   } else {  
-   navbarMenu.classList.remove('transform');  
-   }  
-  })
+          document.addEventListener('scroll', () => {
+            if (navbarMenu.style.display !== "none" && window.scrollY > navbarHeight) {
+            navbarMenu.classList.add('transform');
+            } else {
+            navbarMenu.classList.remove('transform');
+            }
+          });
 
 - [x] 2021/02/04 : JS + CSS(scroll down when the nav menu is clicked)
 
-  1. add data-link="#each section's id" to navbarMenuItems
-  2. add addEventListener to navbarMenu
-  3. now when the event happens(the navbarMenu is clicked), its event.target(navbarMenuItem) saves its data-link values to event.target.dataset.link
-  4. thus, we can check if the navbarMenuItem is clicked by checking the link
-  5. if the navbarMenuItem is clicked, it will have each section's id as their data-link
-  6. when the navbarMenuItem is clicked, call the scrollIntoView on the link to scroll down to each section
+  1.  add data-link="#each section's id" to navbarMenuItems
+  2.  add addEventListener to navbarMenu
+  3.  now when the event happens(the navbarMenu is clicked), its event.target(navbarMenuItem) saves its data-link values to event.target.dataset.link
+  4.  thus, we can check if the navbarMenuItem is clicked by checking the link
+  5.  if the navbarMenuItem is clicked, it will have each section's id as their data-link
+  6.  when the navbarMenuItem is clicked, call the scrollIntoView on the link to scroll down to each section
 
-  navbarMenu.addEventListener('click', (event) => {  
-   const target = event.target;  
-  const link = target.dataset.link;
+            navbarMenu.addEventListener('click', (event) => {
+              const target = event.target;
+              const link = target.dataset.link;
 
-  if (link == null) {  
-   return;  
-   }  
-   const scrollTo = document. querySelector(link);  
-   scrollTo.scrollIntoView();  
-  })
+              if (link == null) {
+              return;
+              }
+              const scrollTo = document. querySelector(link);
+              scrollTo.scrollIntoView();
+            });
 
 - [x] 2021/02/04 : CSS(nav menu has to be on top always)  
        => z-index: 1
