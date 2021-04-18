@@ -53,10 +53,6 @@ ul {
   margin: 0;
 }
 
-.tab {
-  text-indent: 20px;
-}
-
 /* Typography */
 h1 {
   font-family: "minion pro", sans-serif;
@@ -75,6 +71,15 @@ p {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
   text-align: left;
+}
+
+.tab {
+  text-indent: 20px;
+}
+
+.text-art {
+  text-rendering: optimizeLegibility;
+  word-break: break-all;
 }
 
 /* Section common */
