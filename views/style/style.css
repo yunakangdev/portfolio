@@ -529,7 +529,7 @@ p {
 }
 
 .testimonials__container {
-  max-width: 800px;
+  max-width: 810px;
   margin: auto;
 }
 
@@ -571,6 +571,10 @@ p {
 .bar {
   color: red;
   margin: 0 4px;
+}
+
+.name {
+  margin-top: 30px;
 }
 
 /* Contact */
