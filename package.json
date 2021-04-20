@@ -18,11 +18,15 @@
     "express-handlebars": "^5.2.0"
   },
   "devDependencies": {
-    "eslint": "^7.19.0",
+    "eslint": "^7.24.0",
     "eslint-plugin-react": "^7.22.0"
   },
   "eslint.validate": [
-    {"language": "javascript"},
-    {"language": "html"}
+    {
+      "language": "javascript"
+    },
+    {
+      "language": "html"
+    }
   ]
 }
