@@ -878,7 +878,15 @@ p {
   }
 
   /* 414 Container common */
-  .about__container p,
+  .about__container {
+    max-width: 300px;
+  }
+
+  .about__container p {
+    max-width: 330px;
+    margin: auto;
+  }
+
   .skills__container p,
   .testimonials__container p {
     max-width: 300px;
