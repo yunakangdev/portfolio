@@ -111,9 +111,8 @@ let selectedNavItem = navItems[0];
 function selectNavItem(selectedNavIndex) {
   if (selectedNavItem) {
     selectedNavItem.classList.remove('active');
-    selectedNavItem = navItems[selectedNavIndex];
-    selectedNavItem.classList.add('active');  
   } 
+  selectedNavItem.classList.add('active');  
 }
 
 const observerOptions = {
