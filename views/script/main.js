@@ -44,7 +44,7 @@ const navbarBackground = document.querySelector('#navbar__menu');
 // Fade in / out nav menu when scrolling down
 document.addEventListener('scroll', () => {
   if (window.scrollY < navbarHeight) {
-  navbarBackground.style.opacity = 1 - window.scrollY / navbarHeight;
+    navbarBackground.style.opacity = 1 - window.scrollY / navbarHeight;
   } else {
   navbarBackground.style.opacity = 0 + (window.scrollY - navbarHeight) / 150;
   }
@@ -102,7 +102,7 @@ const sectionIds = [
 
 const sections = sectionIds.map(id => document.querySelector(id));
 const navItems = sectionIds.map(id => 
-    document.querySelector(`[data-link="${id}"]`)
+  document.querySelector(`[data-link="${id}"]`)
 );
 
 let selectedNavIndex = 0;
@@ -111,9 +111,9 @@ let selectedNavItem = navItems[0];
 function selectNavItem(selectedNavIndex) {
   if (selectedNavItem) {
     selectedNavItem.classList.remove('active');
+    selectedNavItem = navItems[selectedNavIndex];
+    selectedNavItem.classList.add('active');  
   } 
-  selectedNavItem = navItems[selectedNavIndex];
-  selectedNavItem.classList.add('active');  
 }
 
 const observerOptions = {

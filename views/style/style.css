@@ -340,18 +340,12 @@ p {
     width: 88%;
     background: var(--color-yellow);
   }
-
-  100% {
-  }
 }
 
 @keyframes improving2 {
   50% {
     width: 78%;
     background: var(--color-yellow);
-  }
-
-  100% {
   }
 }
 
@@ -360,18 +354,12 @@ p {
     width: 78%;
     background: var(--color-yellow);
   }
-
-  100% {
-  }
 }
 
 @keyframes improving4 {
   50% {
     width: 68%;
     background: var(--color-yellow);
-  }
-
-  100% {
   }
 }
 
@@ -380,18 +368,12 @@ p {
     width: 68%;
     background: var(--color-yellow);
   }
-
-  100% {
-  }
 }
 
 @keyframes improving6 {
   50% {
     width: 8%;
     background: var(--color-yellow);
-  }
-
-  100% {
   }
 }
 
@@ -631,7 +613,7 @@ p {
   font-size: var(--font-micro);
 }
 
-/* Contact (Jean-Kang)*/
+/* Contact (Jean-Kang) */
 .contact__rights span {
   background-color: var(--color-navy);
   background-image: linear-gradient(
@@ -669,6 +651,8 @@ p {
 .arrow-up.visible {
   cursor: pointer;
 }
+
+/* Currently learning Responsive Design for improvement */
 
 /* iPad */
 /* For below 768px screen width */
