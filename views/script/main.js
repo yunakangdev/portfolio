@@ -109,22 +109,10 @@ let selectedNavIndex = 0;
 let selectedNavItem = navItems[0];
 
 function selectNavItem(selectedNavIndex) {
-  console.log("selectedNavItem(old)");
-  console.log(selectedNavItem);
-
-  console.log("selectedNavIndex");
-  console.log(selectedNavIndex);
-
   if (selectedNavItem) {
     selectedNavItem.classList.remove('active');
   } 
-
-  console.log("selectedNavItem = navItems[selectedNavIndex]");
   selectedNavItem = navItems[selectedNavIndex];
-
-  console.log("selectedNavItem(new)");
-  console.log(selectedNavItem);
-
   selectedNavItem.classList.add('active');  
 }
 
