@@ -259,11 +259,15 @@ p {
 }
 
 .skillset__title {
-  padding-bottom: 22px;
+  padding-bottom: 16px;
+}
+
+.tools .skillset__title {
+  font-size: 17px;
 }
 
 .etc {
-  margin-top: -26px;
+  margin-top: -14px;
 }
 
 .skillset__right .tools {
