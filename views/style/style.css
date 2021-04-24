@@ -948,6 +948,11 @@ p {
     margin-bottom: -10px;
   }
 
+  /* 414 Skills */
+  .tools .skillset__title {
+    font-size: 15px;
+  }
+
   /* 414 Projects */
   .projects__slider {
     max-width: 400px;
