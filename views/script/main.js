@@ -8,7 +8,10 @@ const vaseSound1 = new Audio('./sound/ceramic_sound1.mp3');
 const vaseSound2 = new Audio('./sound/ceramic_sound2.mp3');
 const vaseSound3 = new Audio('./sound/ceramic_sound3.mp3');
 
-window.addEventListener('mouseover', () => {
+bgSound.volume = 0.5;
+bgSound.play();
+
+window.addEventListener('mouseover', () => /{
   bgSound.volume = 0.5;
   bgSound.play();
 })
