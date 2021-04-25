@@ -1,5 +1,40 @@
 'use strict';
 
+// Sound effects for icons
+const vase1 = document.querySelector('.vase1');
+vase1.addEventListener('mouseover', onVase1Click);
+
+const vase2 = document.querySelector('.vase2');
+vase2.addEventListener('mouseover', onVase2Click);
+
+const vase3 = document.querySelector('.vase3');
+vase3.addEventListener('mouseover', onVase3Click);
+
+const vaseSound1 = new Audio('./sound/ceramic_sound1.mp3');
+const vaseSound2 = new Audio('./sound/ceramic_sound2.mp3');
+const vaseSound3 = new Audio('./sound/ceramic_sound3.mp3');
+const bgSound = new Audio('./sound/opened_window.mp3');
+
+window.addEventListener('DOMContentLoaded', (event) => {
+  bgSound.volume = 0.6;
+  bgSound.play();
+})
+
+function onVase1Click() {
+  bgSound.volume = 0.1;
+  vaseSound1.play();
+}
+
+function onVase2Click() {
+  bgSound.volume = 0.1;
+  vaseSound2.play();
+}
+
+function onVase3Click () {
+  bgSound.volume = 0.1;
+  vaseSound3.play();
+}
+
 // Change slides automatically
 var counter = 1;
 setInterval(function() {
@@ -138,3 +173,4 @@ const observerCallback = (entries, observer) => {
 
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 sections.forEach(section => observer.observe(section));
+

@@ -53,6 +53,10 @@ ul {
   margin: 0;
 }
 
+audio {
+  display: none;
+}
+
 /* Typography */
 h1 {
   font-family: "minion pro", sans-serif;
