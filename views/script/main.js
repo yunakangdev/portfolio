@@ -31,13 +31,13 @@ computer.addEventListener('mouseover', () => {
 
 const framework = document.querySelector('.framework');
 framework.addEventListener('mouseover', () => {
-  startupSound.volume = 0.05;
+  startupSound.volume = 0.1;
   clickSound.play();
 })
 
 const db = document.querySelector('.db');
 db.addEventListener('mouseover', () => {
-  startupSound.volume = 0.05;
+  startupSound.volume = 0.1;
   clickSound.play();
 })
 
