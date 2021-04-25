@@ -1,6 +1,18 @@
 'use strict';
 
 // Sound effects for icons
+const bgSound = new Audio('./sound/opened_window_sound.mp3');
+const startupSound = new Audio('./sound/startup_sound.mp3');
+const clickSound = new Audio('./sound/click_sound.mp3');
+const vaseSound1 = new Audio('./sound/ceramic_sound1.mp3');
+const vaseSound2 = new Audio('./sound/ceramic_sound2.mp3');
+const vaseSound3 = new Audio('./sound/ceramic_sound3.mp3');
+
+window.addEventListener('mouseover', () => {
+  bgSound.volume = 0.5;
+  bgSound.play();
+})
+
 const vase1 = document.querySelector('.vase1');
 vase1.addEventListener('mouseover', onVase1Click);
 
@@ -10,28 +22,37 @@ vase2.addEventListener('mouseover', onVase2Click);
 const vase3 = document.querySelector('.vase3');
 vase3.addEventListener('mouseover', onVase3Click);
 
-const vaseSound1 = new Audio('./sound/ceramic_sound1.mp3');
-const vaseSound2 = new Audio('./sound/ceramic_sound2.mp3');
-const vaseSound3 = new Audio('./sound/ceramic_sound3.mp3');
-const bgSound = new Audio('./sound/opened_window.mp3');
+const computer = document.querySelector('.computer');
+computer.addEventListener('mouseover', () => {
+  startupSound.playbackRate = 1.1;
+  startupSound.volume = 0.1;
+  startupSound.play();
+})
 
-window.addEventListener('DOMContentLoaded', (event) => {
-  bgSound.volume = 0.6;
-  bgSound.play();
+const framework = document.querySelector('.framework');
+framework.addEventListener('mouseover', () => {
+  startupSound.volume = 0.05;
+  clickSound.play();
+})
+
+const db = document.querySelector('.db');
+db.addEventListener('mouseover', () => {
+  startupSound.volume = 0.05;
+  clickSound.play();
 })
 
 function onVase1Click() {
-  bgSound.volume = 0.1;
+  vaseSound1.volume = 0.2;
   vaseSound1.play();
 }
 
 function onVase2Click() {
-  bgSound.volume = 0.1;
+  vaseSound2.volume = 0.2;
   vaseSound2.play();
 }
 
 function onVase3Click () {
-  bgSound.volume = 0.1;
+  vaseSound3.volume = 0.2;
   vaseSound3.play();
 }
 
