@@ -13,14 +13,47 @@ window.addEventListener('mouseover', () => {
   bgSound.play();
 })
 
-const vase1 = document.querySelector('.vase1');
-vase1.addEventListener('mouseover', onVase1Click);
+const homeImage = document.querySelector('#home__image');
+homeImage.addEventListener('click', () => {
+  clickSound.volume = 0.2;
+  clickSound.play();
+})
 
-const vase2 = document.querySelector('.vase2');
-vase2.addEventListener('mouseover', onVase2Click);
+const productDesign = document.querySelector('.product__design');
+productDesign.addEventListener('click', () => {
+  clickSound.volume = 0.2;
+  clickSound.play();
+})
 
-const vase3 = document.querySelector('.vase3');
-vase3.addEventListener('mouseover', onVase3Click);
+const projectSlides = document.querySelector('.projects__slides');
+projectSlides.addEventListener('click', () => {
+  clickSound.volume = 0.2;
+  clickSound.play();
+})
+
+const testimonialFirst = document.querySelector('.moe');
+testimonialFirst.addEventListener('click', () => {
+  clickSound.volume = 0.2;
+  clickSound.play();
+})
+
+const testimonialSecond = document.querySelector('.jisoo');
+testimonialSecond.addEventListener('click', () => {
+  clickSound.volume = 0.2;
+  clickSound.play();
+})
+
+const testimonialFirstFace = document.querySelector('.yousef');
+testimonialFirstFace.addEventListener('click', () => {
+  clickSound.volume = 0.2;
+  clickSound.play();
+})
+
+const testimonialSecondFace = document.querySelector('.lee');
+testimonialSecondFace.addEventListener('click', () => {
+  clickSound.volume = 0.2;
+  clickSound.play();
+})
 
 const computer = document.querySelector('.computer');
 computer.addEventListener('mouseover', () => {
@@ -31,15 +64,24 @@ computer.addEventListener('mouseover', () => {
 
 const framework = document.querySelector('.framework');
 framework.addEventListener('mouseover', () => {
-  startupSound.volume = 0.1;
+  clickSound.volume = 0.2;
   clickSound.play();
 })
 
 const db = document.querySelector('.db');
 db.addEventListener('mouseover', () => {
-  startupSound.volume = 0.1;
+  clickSound.volume = 0.3;
   clickSound.play();
 })
+
+const vase1 = document.querySelector('.vase1');
+vase1.addEventListener('mouseover', onVase1Click);
+
+const vase2 = document.querySelector('.vase2');
+vase2.addEventListener('mouseover', onVase2Click);
+
+const vase3 = document.querySelector('.vase3');
+vase3.addEventListener('mouseover', onVase3Click);
 
 function onVase1Click() {
   vaseSound1.volume = 0.2;
