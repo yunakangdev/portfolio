@@ -11,7 +11,7 @@ const vaseSound3 = new Audio('./sound/ceramic_sound3.mp3');
 bgSound.volume = 0.5;
 bgSound.play();
 
-window.addEventListener('mouseover', () => /{
+window.addEventListener('mouseover', () => {
   bgSound.volume = 0.5;
   bgSound.play();
 })
