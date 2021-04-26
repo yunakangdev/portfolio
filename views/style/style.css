@@ -656,21 +656,15 @@ p {
   cursor: pointer;
 }
 
-.ipod img {
+img.ipod {
   position: absolute;
   width: 60px;
-  bottom: 46px;
+  bottom: 5vh;
   left: 25vw;
-  background: transparent;
-  color: var(--color-navy);
-  border: transparent;
-  outline: none;
-  /* transition:  var(--animation-duration) ease-in-out; */
   cursor: pointer;
 }
 
 /* Currently learning Responsive Design for improvement */
-
 /* iPad */
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
