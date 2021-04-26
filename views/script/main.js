@@ -108,7 +108,7 @@ const ipod = document.querySelector('.ipod');
 
 function ipodHandleMouseOver() {
   console.log(ipod.src);
-  if (ipod.src === "http://jean-kang.herokuapp.com/images/ipod_off.png" || this.src === "https://jean-kang.herokuapp.com/images/ipod_off.png") {
+  if (ipod.src === "http://jean-kang.herokuapp.com/images/ipod_off.png" || ipod.src === "https://jean-kang.herokuapp.com/images/ipod_off.png") {
     console.log('mouseover! change it to hover');
     ipod.src = "http://jean-kang.herokuapp.com/images/ipod_hover.png";
   } else {
