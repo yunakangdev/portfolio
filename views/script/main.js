@@ -104,11 +104,11 @@ function showHideMenu() {
 }
 
 // handle ipod icon click
-const ipod = document.querySelector('.ipod');
+// const ipod = document.querySelector('.ipod');
 
-function ipodHandleMouseOver() {
+function ipodHandleMouseOver(ipod) {
   console.log(ipod.src);
-  if (ipod.src === "http://jean-kang.herokuapp.com/images/ipod_off.png") {
+  if (ipod.src === "http://jean-kang.herokuapp.com/images/ipod_off.png" || this.src === "https://jean-kang.herokuapp.com/images/ipod_off.png") {
     console.log('mouseover! change it to hover');
     ipod.src = "http://jean-kang.herokuapp.com/images/ipod_hover.png";
   } else {
@@ -117,7 +117,7 @@ function ipodHandleMouseOver() {
   }
 }
 
-function ipodHandleMouseOut() {
+function ipodHandleMouseOut(ipod) {
   if (ipod.src === "http://jean-kang.herokuapp.com/images/ipod_off.png") {
     console.log('mouseout! changing to on');
     ipod.src = "http://jean-kang.herokuapp.com/images/ipod_on.png";
@@ -127,13 +127,13 @@ function ipodHandleMouseOut() {
   }
 }
 
-function ipodHandleClick() {
+function ipodHandleClick(ipod) {
   playSound(0.1, clickSound);
-  onOffIpod();
+  onOffIpod(ipod);
   onOffSound();
 }
 
-function onOffIpod() {
+function onOffIpod(ipod) {
   if (ipod.src === "http://jean-kang.herokuapp.com/images/ipod_off.png" || ipod.src === "http://jean-kang.herokuapp.com/images/ipod_hover.png") {
     console.log('turning on Ipod');
     ipod.src = "http://jean-kang.herokuapp.com/images/ipod_on.png";
