@@ -187,6 +187,22 @@ p {
   margin: auto;
 }
 
+#home {
+  position: relative;
+}
+
+.ipod__container {
+  display: block;
+}
+
+.ipod {
+  position: absolute;
+  width: 60px;
+  left: 500px;
+  bottom: 30px;
+  cursor: pointer;
+}
+
 /* About */
 .about__container {
   margin: auto;
@@ -656,14 +672,6 @@ p {
   cursor: pointer;
 }
 
-img.ipod {
-  position: absolute;
-  width: 60px;
-  bottom: 8vh;
-  left: 25vw;
-  cursor: pointer;
-}
-
 /* Currently learning Responsive Design for improvement */
 /* iPad */
 /* For below 768px screen width */
@@ -714,9 +722,8 @@ img.ipod {
   }
 
   /* 768 Ipod */
-  img.ipod {
-    left: 22vw;
-    bottom: 21vh;
+  .ipod {
+    transform: translate(-30%, 0);
   }
 
   /* 768 About */
