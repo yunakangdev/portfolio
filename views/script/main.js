@@ -106,38 +106,27 @@ function showHideMenu() {
 // handle ipod icon click
 const ipod = document.querySelector('.ipod');
 
-function ipodHandleMouseOver() {
-  let isOn;
-
-  console.log(ipod.classList);
-  console.log(ipod.classList.length);
-
-  if (ipod.classList.length === 1) {
-    isOn = false;
-  } else {
-    isOn = true;
-  }
-
-  if (!isOn) {
-    ipod.src = "http://jean-kang.herokuapp.com/images/ipod_hover.png";
-  } else {
-    ipod.src = "http://jean-kang.herokuapp.com/images/ipod_off.png";
-  }
+function onIpod() {
+  ipod.src = "http://jean-kang.herokuapp.com/images/ipod_on.png";
 }
 
-function ipodHandleMouseOut() {
-  let isOn;
+function offIpod() {
+  ipod.src = "http://jean-kang.herokuapp.com/images/ipod_off.png";
+}
 
+function onMusic() {
+  playSound(0.4, bgSound);
+}
+
+function offMusic() {
+  bgSound.pause();
+}
+
+function switchOnOffFlag() {
   if (ipod.classList.length === 1) {
-    isOn = false;
+    ipod.classList.add("on");
   } else {
-    isOn = true;
-  }
-
-  if (!isOn) {
-    ipod.src = "http://jean-kang.herokuapp.com/images/ipod_off.png";
-  } else {
-    ipod.src = "http://jean-kang.herokuapp.com/images/ipod_on.png";
+    ipod.classList.remove("on");
   }
 }
 
@@ -155,36 +144,11 @@ function ipodHandleClick() {
   
   if (!isOn) {
     onIpod();
-    onMusic();
+    onMusic();  
   } else {
     offIpod();
     offMusic();
   }
-}
-
-function switchOnOffFlag() {
-  if (ipod.classList.length === 1) {
-    ipod.classList.add("on");
-  } else {
-    ipod.classList.remove("on");
-  }
-}
-
-function onIpod() {
-  ipod.src = "http://jean-kang.herokuapp.com/images/ipod_on.png";
-}
-
-function offIpod() {
-  ipod.src = "http://jean-kang.herokuapp.com/images/ipod_off.png";
-}
-
-function onMusic() {
-  bgSound.volume(0.4);
-  bgSound.play();
-}
-
-function offMusic() {
-  bgSound.pause();
 }
 
 // Transform nav menu when scrolling down

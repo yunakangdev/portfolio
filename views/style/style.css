@@ -659,7 +659,7 @@ p {
 img.ipod {
   position: absolute;
   width: 60px;
-  bottom: 5vh;
+  bottom: 8vh;
   left: 25vw;
   cursor: pointer;
 }
@@ -711,6 +711,12 @@ img.ipod {
     max-width: 80%;
     height: 700px;
     padding-bottom: 20px;
+  }
+
+  /* 768 Ipod */
+  img.ipod {
+    left: 22vw;
+    bottom: 21vh;
   }
 
   /* 768 About */
@@ -1073,4 +1079,13 @@ img.ipod {
   .contact__links {
     max-width: 200px;
   }
+}
+
+/* ipod */
+img.ipod:not(.on):hover {
+  content: url("http://jean-kang.herokuapp.com/images/ipod_hover.png");
+}
+
+img.on:hover {
+  content: url("http://jean-kang.herokuapp.com/images/ipod_off.png");
 }
