@@ -107,49 +107,81 @@ function showHideMenu() {
 const ipod = document.querySelector('.ipod');
 
 function ipodHandleMouseOver() {
-  console.log(ipod.src);
-  if (ipod.src === "http://jean-kang.herokuapp.com/images/ipod_off.png" || ipod.src === "https://jean-kang.herokuapp.com/images/ipod_off.png") {
-    console.log('mouseover! change it to hover');
+  let isOn;
+
+  if (ipod.classList.length === 1) {
+    isOn = false;
+  } else {
+    isOn = true;
+  }
+
+  if (!isOn) {
     ipod.src = "http://jean-kang.herokuapp.com/images/ipod_hover.png";
   } else {
-    console.log('mouseover! change it to off');
     ipod.src = "http://jean-kang.herokuapp.com/images/ipod_off.png";
   }
 }
 
 function ipodHandleMouseOut() {
-  if (ipod.src === "http://jean-kang.herokuapp.com/images/ipod_off.png" || ipod.src === "https://jean-kang.herokuapp.com/images/ipod_off.png") {
-    ipod.src = "http://jean-kang.herokuapp.com/images/ipod_on.png";
-  } else if (ipod.src === "http://jean-kang.herokuapp.com/images/ipod_hover.png") {    
+  let isOn;
+
+  if (ipod.classList.length === 1) {
+    isOn = false;
+  } else {
+    isOn = true;
+  }
+
+  if (!isOn) {
     ipod.src = "http://jean-kang.herokuapp.com/images/ipod_off.png";
-  } else if (ipod.src === "http://jean-kang.herokuapp.com/images/ipod_on.png") {
-    ipod.src === "http://jean-kang.herokuapp.com/images/ipod_on.png"
+  } else {
+    ipod.src = "http://jean-kang.herokuapp.com/images/ipod_on.png";
   }
 }
 
 function ipodHandleClick() {
+  let isOn;
+
+  switchOnOffFlag();
   playSound(0.1, clickSound);
-  onOffIpod(ipod);
-  onOffSound();
-}
 
-function onOffIpod() {
-  console.log(ipod.src);
-  if (ipod.src === "http://jean-kang.herokuapp.com/images/ipod_off.png" || ipod.src === "http://jean-kang.herokuapp.com/images/ipod_hover.png") {
-    console.log('turning on Ipod');
-    ipod.src = "http://jean-kang.herokuapp.com/images/ipod_on.png";
+  if (ipod.classList.length === 1) {
+    isOn = false;
   } else {
-    console.log('turning off Ipod');
-    ipod.src = "http://jean-kang.herokuapp.com/images/ipod_off.png";
+    isOn = true;
+  }
+  
+  if (!isOn) {
+    onIpod();
+    onMusic();
+  } else {
+    offIpod();
+    offMusic();
   }
 }
 
-function onOffSound() {
-  if (bgSound.paused) {
-    playSound(0.4, bgSound);
+function switchOnOffFlag() {
+  if (ipod.classList.length === 1) {
+    ipod.classList.add("on");
   } else {
-    bgSound.pause();
+    ipod.classList.remove("on");
   }
+}
+
+function onIpod() {
+  ipod.src = "http://jean-kang.herokuapp.com/images/ipod_on.png";
+}
+
+function offIpod() {
+  ipod.src = "http://jean-kang.herokuapp.com/images/ipod_off.png";
+}
+
+function onMusic() [
+  bgSound.volume(0.4);
+  bgSound.play();
+]
+
+function offMusic() {
+  bgSound.pause();
 }
 
 // Transform nav menu when scrolling down
