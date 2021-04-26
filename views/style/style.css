@@ -191,6 +191,7 @@ p {
   position: relative;
 }
 
+/* iPod */
 .ipod__container {
   display: block;
 }
@@ -1090,14 +1091,4 @@ img.ipod {
   .contact__links {
     max-width: 200px;
   }
-}
-
-/* ipod */
-.ipod__comment {
-  color: white;
-  font-size: var(--font-micro);
-}
-
-.ipod:not(.on):hover .ipod__comment {
-  color: var(--color-navy);
 }
