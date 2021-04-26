@@ -13,10 +13,6 @@ function playSound(volume, sound) {
   sound.play();
 }
 
-window.addEventListener('mouseover', () => {
-  playSound(0.4, bgSound);
-})
-
 const productDesign = document.querySelector('.product__design');
 productDesign.addEventListener('click', () => {
   playSound(0.1, clickSound);

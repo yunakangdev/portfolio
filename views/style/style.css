@@ -195,11 +195,14 @@ p {
   display: block;
 }
 
-.ipod {
+#ipod__container {
   position: absolute;
+  left: 400px;
+  bottom: 40px;
+}
+
+img.ipod {
   width: 55px;
-  left: 500px;
-  bottom: 65px;
   cursor: pointer;
 }
 
@@ -724,7 +727,7 @@ p {
   /* 768 Ipod */
   .ipod {
     width: 45px;
-    transform: translate(-660%, -295%);
+    transform: translate(-720%, -230%);
   }
 
   /* 768 About */
@@ -1090,10 +1093,11 @@ p {
 }
 
 /* ipod */
-img.on:hover {
-  content: url("http://jean-kang.herokuapp.com/images/ipod_off.png");
+.ipod__comment {
+  color: white;
+  font-size: var(--font-micro);
 }
 
-img.ipod:not(.on):hover {
-  content: url("http://jean-kang.herokuapp.com/images/ipod_hover.png");
+[class^="ipod"]:hover .ipod__comment {
+  color: var(--color-navy);
 }
