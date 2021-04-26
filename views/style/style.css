@@ -1098,6 +1098,6 @@ img.ipod {
   font-size: var(--font-micro);
 }
 
-[class^="ipod"]:not(.on):hover .ipod__comment {
+.ipod:not(.on):hover .ipod__comment {
   color: var(--color-navy);
 }
