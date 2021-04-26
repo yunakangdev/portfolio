@@ -120,8 +120,10 @@ function ipodHandleMouseOver() {
 function ipodHandleMouseOut() {
   if (ipod.src === "http://jean-kang.herokuapp.com/images/ipod_off.png" || ipod.src === "https://jean-kang.herokuapp.com/images/ipod_off.png") {
     ipod.src = "http://jean-kang.herokuapp.com/images/ipod_on.png";
-  } else {    
+  } else if (ipod.src === "http://jean-kang.herokuapp.com/images/ipod_hover.png") {    
     ipod.src = "http://jean-kang.herokuapp.com/images/ipod_off.png";
+  } else if (ipod.src === "http://jean-kang.herokuapp.com/images/ipod_on.png") {
+    ipod.src === "http://jean-kang.herokuapp.com/images/ipod_on.png"
   }
 }
 
