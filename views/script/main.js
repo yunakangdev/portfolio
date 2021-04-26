@@ -108,22 +108,22 @@ const ipod = document.querySelector('.ipod');
 
 function ipodHandleMouseOver() {
   console.log(ipod.src);
-  if (ipod.src === "./images/ipod_off.png") {
+  if (ipod.src === "http://jean-kang.herokuapp.com/images/ipod_off.png") {
     console.log('mouseover! change it to hover');
-    ipod.src = "./images/ipod_hover.png";
+    ipod.src = "http://jean-kang.herokuapp.com/images/ipod_hover.png";
   } else {
     console.log('mouseover! change it to off');
-    ipod.src = "./images/ipod_off.png";
+    ipod.src = "http://jean-kang.herokuapp.com/images/ipod_off.png";
   }
 }
 
 function ipodHandleMouseOut() {
-  if (ipod.src === "./images/ipod_off.png") {
+  if (ipod.src === "http://jean-kang.herokuapp.com/images/ipod_off.png") {
     console.log('mouseout! changing to on');
-    ipod.src = "./images/ipod_on.png";
+    ipod.src = "http://jean-kang.herokuapp.com/images/ipod_on.png";
   } else {
     console.log('mouseout! changing to off');
-    ipod.src = "./images/ipod_off.png";
+    ipod.src = "http://jean-kang.herokuapp.com/images/ipod_off.png";
   }
 }
 
@@ -134,12 +134,12 @@ function ipodHandleClick() {
 }
 
 function onOffIpod() {
-  if (ipod.src === "./images/ipod_off.png" || ipod.src === "./images/ipod_hover.png") {
+  if (ipod.src === "http://jean-kang.herokuapp.com/images/ipod_off.png" || ipod.src === "http://jean-kang.herokuapp.com/images/ipod_hover.png") {
     console.log('turning on Ipod');
-    ipod.src = "./images/ipod_on.png";
+    ipod.src = "http://jean-kang.herokuapp.com/images/ipod_on.png";
   } else {
     console.log('turning off Ipod');
-    ipod.src = "./images/ipod_off.png";
+    ipod.src = "http://jean-kang.herokuapp.com/images/ipod_off.png";
   }
 }
 
@@ -147,13 +147,9 @@ function onOffSound() {
   if (bgSound.paused) {
     playSound(0.4, bgSound);
   } else {
-    bgSound.stop();
+    bgSound.pause();
   }
 }
-
-// window.addEventListener('mouseover', () => {
-//   playSound(0.4, bgSound);
-// })
 
 // Transform nav menu when scrolling down
 document.addEventListener('scroll', () => {
