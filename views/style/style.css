@@ -727,7 +727,7 @@ img.ipod {
   /* 768 Ipod */
   .ipod {
     width: 45px;
-    transform: translate(-720%, -230%);
+    transform: translate(-440%, -230%);
   }
 
   /* 768 About */
@@ -1098,6 +1098,6 @@ img.ipod {
   font-size: var(--font-micro);
 }
 
-[class^="ipod"]:hover .ipod__comment {
+[class^="ipod"]:not("on"):hover .ipod__comment {
   color: var(--color-navy);
 }
