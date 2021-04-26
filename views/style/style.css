@@ -197,9 +197,9 @@ p {
 
 .ipod {
   position: absolute;
-  width: 60px;
+  width: 55px;
   left: 500px;
-  bottom: 30px;
+  bottom: 65px;
   cursor: pointer;
 }
 
@@ -1090,10 +1090,10 @@ p {
 }
 
 /* ipod */
-img.ipod:not(.on):hover {
-  content: url("http://jean-kang.herokuapp.com/images/ipod_hover.png");
-}
-
 img.on:hover {
   content: url("http://jean-kang.herokuapp.com/images/ipod_off.png");
+}
+
+img.ipod:not(.on):hover {
+  content: url("http://jean-kang.herokuapp.com/images/ipod_hover.png");
 }
