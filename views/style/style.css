@@ -1075,6 +1075,12 @@ img.ipod {
     height: 520px;
   }
 
+  /* 280 iPod */
+  #ipod__container {
+    width: 15px;
+    transform: translate(-2300%, -90%);
+  }
+
   /* 280 Skills */
   .skillset__right {
     display: flex;
