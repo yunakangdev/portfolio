@@ -14,8 +14,10 @@
   "author": "jean kang",
   "license": "ISC",
   "dependencies": {
+    "bootstrap-icons": "^1.4.1",
     "express": "^4.17.1",
-    "express-handlebars": "^5.2.0"
+    "express-handlebars": "^5.2.0",
+    "react-icons": "^4.2.0"
   },
   "devDependencies": {
     "eslint": "^7.24.0",

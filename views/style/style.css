@@ -656,6 +656,19 @@ p {
   cursor: pointer;
 }
 
+.sound img {
+  position: absolute;
+  width: 60px;
+  bottom: 46px;
+  left: 25vw;
+  background: transparent;
+  color: var(--color-navy);
+  border: transparent;
+  outline: none;
+  /* transition:  var(--animation-duration) ease-in-out; */
+  cursor: pointer;
+}
+
 /* Currently learning Responsive Design for improvement */
 
 /* iPad */
@@ -703,6 +716,7 @@ p {
     background: top/cover no-repeat url("../images/home_mobile.png");
     max-width: 80%;
     height: 700px;
+    padding-bottom: 20px;
   }
 
   /* 768 About */

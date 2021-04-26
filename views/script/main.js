@@ -8,70 +8,54 @@ const vaseSound1 = new Audio('./sound/ceramic_sound1.mp3');
 const vaseSound2 = new Audio('./sound/ceramic_sound2.mp3');
 const vaseSound3 = new Audio('./sound/ceramic_sound3.mp3');
 
-window.addEventListener('mouseover', () => {
-  bgSound.volume = 0.5;
-  bgSound.play();
-})
-
-const homeImage = document.querySelector('#home__image');
-homeImage.addEventListener('click', () => {
-  clickSound.volume = 0.2;
-  clickSound.play();
-})
+function playSound(volume, sound) {
+  sound.volume = volume;
+  sound.play();
+}
 
 const productDesign = document.querySelector('.product__design');
 productDesign.addEventListener('click', () => {
-  clickSound.volume = 0.2;
-  clickSound.play();
+  playSound(0.1, clickSound);
 })
 
 const projectSlides = document.querySelector('.projects__slides');
 projectSlides.addEventListener('click', () => {
-  clickSound.volume = 0.2;
-  clickSound.play();
+  playSound(0.1, clickSound);
 })
 
 const testimonialFirst = document.querySelector('.moe');
 testimonialFirst.addEventListener('click', () => {
-  clickSound.volume = 0.2;
-  clickSound.play();
+  playSound(0.1, clickSound);
 })
 
 const testimonialSecond = document.querySelector('.jisoo');
 testimonialSecond.addEventListener('click', () => {
-  clickSound.volume = 0.2;
-  clickSound.play();
+  playSound(0.1, clickSound);
 })
 
 const testimonialFirstFace = document.querySelector('.yousef');
 testimonialFirstFace.addEventListener('click', () => {
-  clickSound.volume = 0.2;
-  clickSound.play();
+  playSound(0.1, clickSound);
 })
 
 const testimonialSecondFace = document.querySelector('.lee');
 testimonialSecondFace.addEventListener('click', () => {
-  clickSound.volume = 0.2;
-  clickSound.play();
+  playSound(0.1, clickSound);
 })
 
 const computer = document.querySelector('.computer');
 computer.addEventListener('mouseover', () => {
-  startupSound.playbackRate = 1.1;
-  startupSound.volume = 0.1;
-  startupSound.play();
+  playSound(0.1, startupSound);
 })
 
 const framework = document.querySelector('.framework');
 framework.addEventListener('mouseover', () => {
-  clickSound.volume = 0.2;
-  clickSound.play();
+  playSound(0.1, clickSound);
 })
 
 const db = document.querySelector('.db');
 db.addEventListener('mouseover', () => {
-  clickSound.volume = 0.3;
-  clickSound.play();
+  playSound(0.1, clickSound);
 })
 
 const vase1 = document.querySelector('.vase1');
@@ -84,18 +68,15 @@ const vase3 = document.querySelector('.vase3');
 vase3.addEventListener('mouseover', onVase3Click);
 
 function onVase1Click() {
-  vaseSound1.volume = 0.2;
-  vaseSound1.play();
+  playSound(0.1, vaseSound1);
 }
 
 function onVase2Click() {
-  vaseSound2.volume = 0.2;
-  vaseSound2.play();
+  playSound(0.1, vaseSound2);
 }
 
 function onVase3Click () {
-  vaseSound3.volume = 0.2;
-  vaseSound3.play();
+  playSound(0.1, vaseSound3);
 }
 
 // Change slides automatically
@@ -121,6 +102,58 @@ function showHideMenu() {
     navbarMenu.style.display = "none";
   }
 }
+
+// handle ipod icon click
+const ipod = document.querySelector('.ipod');
+
+function ipodHandleMouseOver() {
+  console.log(ipod.src);
+  if (ipod.src === "./images/ipod_off.png") {
+    console.log('mouseover! change it to hover');
+    ipod.src = "./images/ipod_hover.png";
+  } else {
+    console.log('mouseover! change it to off');
+    ipod.src = "./images/ipod_off.png";
+  }
+}
+
+function ipodHandleMouseOut() {
+  if (ipod.src === "./images/ipod_off.png") {
+    console.log('mouseout! changing to on');
+    ipod.src = "./images/ipod_on.png";
+  } else {
+    console.log('mouseout! changing to off');
+    ipod.src = "./images/ipod_off.png";
+  }
+}
+
+function ipodHandleClick() {
+  playSound(0.1, clickSound);
+  onOffIpod();
+  onOffSound();
+}
+
+function onOffIpod() {
+  if (ipod.src === "./images/ipod_off.png" || ipod.src === "./images/ipod_hover.png") {
+    console.log('turning on Ipod');
+    ipod.src = "./images/ipod_on.png";
+  } else {
+    console.log('turning off Ipod');
+    ipod.src = "./images/ipod_off.png";
+  }
+}
+
+function onOffSound() {
+  if (bgSound.paused) {
+    playSound(0.4, bgSound);
+  } else {
+    bgSound.stop();
+  }
+}
+
+// window.addEventListener('mouseover', () => {
+//   playSound(0.4, bgSound);
+// })
 
 // Transform nav menu when scrolling down
 document.addEventListener('scroll', () => {
