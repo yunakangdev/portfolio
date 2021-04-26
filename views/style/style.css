@@ -725,9 +725,9 @@ img.ipod {
   }
 
   /* 768 Ipod */
-  .ipod {
+  #ipod__container {
     width: 45px;
-    transform: translate(-720%, -230%);
+    transform: translate(-430%, -230%);
   }
 
   /* 768 About */
