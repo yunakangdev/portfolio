@@ -109,6 +109,9 @@ const ipod = document.querySelector('.ipod');
 function ipodHandleMouseOver() {
   let isOn;
 
+  console.log(ipod.classList);
+  console.log(ipod.classList.length);
+
   if (ipod.classList.length === 1) {
     isOn = false;
   } else {
@@ -175,10 +178,10 @@ function offIpod() {
   ipod.src = "http://jean-kang.herokuapp.com/images/ipod_off.png";
 }
 
-function onMusic() [
+function onMusic() {
   bgSound.volume(0.4);
   bgSound.play();
-]
+}
 
 function offMusic() {
   bgSound.pause();
