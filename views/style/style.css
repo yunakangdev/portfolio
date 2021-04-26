@@ -956,6 +956,12 @@ img.ipod {
     max-width: 100%;
   }
 
+  /* 414 iPod */
+  #ipod__container {
+    width: 40px;
+    transform: translate(-920%, -230%);
+  }
+
   /* 414 About */
   .section#about {
     padding-bottom: 16px;
