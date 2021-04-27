@@ -1,6 +1,6 @@
 'use strict';
 
-// Sound effects for icons
+// Sound effect
 const bgSound = new Audio('./sound/opened_window_sound.mp3');
 const startupSound = new Audio('./sound/startup_sound.mp3');
 const clickSound = new Audio('./sound/click_sound.mp3');
@@ -8,10 +8,28 @@ const vaseSound1 = new Audio('./sound/ceramic_sound1.mp3');
 const vaseSound2 = new Audio('./sound/ceramic_sound2.mp3');
 const vaseSound3 = new Audio('./sound/ceramic_sound3.mp3');
 
+// Set the volume and play the sound
 function playSound(volume, sound) {
   sound.volume = volume;
   sound.play();
 }
+
+// Add Mac startup sound effect for the computer icon on click
+const computer = document.querySelector('.computer');
+computer.addEventListener('mouseover', () => {
+  playSound(0.1, startupSound);
+})
+
+// Add sound effect for texts / icons on click
+const framework = document.querySelector('.framework');
+framework.addEventListener('mouseover', () => {
+  playSound(0.1, clickSound);
+})
+
+const db = document.querySelector('.db');
+db.addEventListener('mouseover', () => {
+  playSound(0.1, clickSound);
+})
 
 const productDesign = document.querySelector('.product__design');
 productDesign.addEventListener('click', () => {
@@ -43,21 +61,6 @@ testimonialSecondFace.addEventListener('click', () => {
   playSound(0.1, clickSound);
 })
 
-const computer = document.querySelector('.computer');
-computer.addEventListener('mouseover', () => {
-  playSound(0.1, startupSound);
-})
-
-const framework = document.querySelector('.framework');
-framework.addEventListener('mouseover', () => {
-  playSound(0.1, clickSound);
-})
-
-const db = document.querySelector('.db');
-db.addEventListener('mouseover', () => {
-  playSound(0.1, clickSound);
-})
-
 const vase1 = document.querySelector('.vase1');
 vase1.addEventListener('mouseover', onVase1Click);
 
@@ -79,7 +82,7 @@ function onVase3Click () {
   playSound(0.1, vaseSound3);
 }
 
-// Change slides automatically
+// Change project slides automatically
 var counter = 1;
 setInterval(function() {
   document.getElementById('radio' + counter).checked = true;
@@ -103,7 +106,6 @@ function showHideMenu() {
   }
 }
 
-// handle ipod icon click
 const ipod = document.querySelector('.ipod');
 
 function onIpod() {
@@ -122,6 +124,7 @@ function offMusic() {
   bgSound.pause();
 }
 
+// A flag function for ipod icon to check if it's on / off
 function switchOnOffFlag() {
   if (ipod.classList.length === 1) {
     ipod.classList.add("on");
@@ -130,6 +133,8 @@ function switchOnOffFlag() {
   }
 }
 
+// Switch the ipod icon to on / off 
+// change the image, play clicking sound effect, play / pause bg music
 function ipodHandleClick() {
   let isOn;
 
@@ -149,6 +154,13 @@ function ipodHandleClick() {
     offIpod();
     offMusic();
   }
+
+  setTimeout(() => {
+    if (bgSound.pause()) {
+      offIpod();
+      switchOnOffFlag();
+    }
+  }, 65000);
 }
 
 // Transform nav menu when scrolling down
