@@ -160,7 +160,7 @@ function ipodHandleClick() {
       offIpod();
       switchOnOffFlag();
     }
-  }, 65000);
+  }, 70000);
 }
 
 // Transform nav menu when scrolling down

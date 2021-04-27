@@ -191,8 +191,19 @@ p {
   position: relative;
 }
 
+/* iPod */
+.ipod__container {
+  display: block;
+}
+
+#ipod__container {
+  position: absolute;
+  left: 400px;
+  bottom: 40px;
+}
+
 img.ipod {
-  max-width: 55px;
+  width: 55px;
   cursor: pointer;
 }
 
