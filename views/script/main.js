@@ -133,34 +133,49 @@ function switchOnOffFlag() {
   }
 }
 
+function isIpodTurnedOn() {
+  const isIpodTurnedOn;
+
+  if (ipod.classList.length === 1) {
+    isIpodTurnedOn = false;
+  } else isIpodTurnedOn = true;
+
+  return isIpodTurnedOn;
+}
+
+function loopOrStop() {
+  window.addEventListener('mouseover', () => {
+    // Turn off the ipod if the music was paused by the user
+    if (bgSound.paused() && !isIpodTurnedOn) {
+      offIpod();
+      switchOnOffFlag();
+    }
+
+    // Keep playing the music when it was not paused by the user
+    // (When it was paused after the music length)
+    if (bgSound.paused() && isIpodTurnedOn) {
+      playSound(0.4, bgSound);
+    }
+  })
+}
+
 // Switch the ipod icon to on / off 
-// change the image, play clicking sound effect, play / pause bg music
+// Change the icon image, play clicking sound effect, play / pause bg music
 function ipodHandleClick() {
-  let isOn;
 
   switchOnOffFlag();
   playSound(0.1, clickSound);
-
-  if (ipod.classList.length === 1) {
-    isOn = false;
-  } else {
-    isOn = true;
-  }
   
-  if (!isOn) {
+  if (!isIpodTurnedOn) {
     onIpod();
     onMusic();  
   } else {
     offIpod();
     offMusic();
   }
-
-  setTimeout(() => {
-    if (bgSound.pause()) {
-      offIpod();
-      switchOnOffFlag();
-    }
-  }, 70000);
+  
+  // Loop or stop the music after it is over, depending on the user's choice
+  loopOrStop();  
 }
 
 // Transform nav menu when scrolling down
