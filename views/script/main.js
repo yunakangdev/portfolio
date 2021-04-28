@@ -143,39 +143,27 @@ function isIpodTurnedOn() {
   return isIpodTurnedOn;
 }
 
-function loopOrStop() {
-  window.addEventListener('mouseover', () => {
-    // Turn off the ipod if the music was paused by the user
-    if (bgSound.paused() && !isIpodTurnedOn) {
-      offIpod();
-      switchOnOffFlag();
-    }
-
-    // Keep playing the music when it was not paused by the user
-    // (When it was paused after the music length)
+function loopBgSound() {
     if (bgSound.paused() && isIpodTurnedOn) {
       playSound(0.4, bgSound);
     }
-  })
-}
+  }
 
-// Switch the ipod icon to on / off 
-// Change the icon image, play clicking sound effect, play / pause bg music
-function ipodHandleClick() {
-
+  // On / off ipod
+  // (Change the icon image, play clicking sound effect, play / pause bg music)
+  function ipodHandleClick() {    
   switchOnOffFlag();
   playSound(0.1, clickSound);
   
   if (!isIpodTurnedOn) {
     onIpod();
     onMusic();  
+    // Loop bgSound when it is paused after the music length
+    setTimeout(loopBgSound(), 66000);
   } else {
     offIpod();
     offMusic();
   }
-  
-  // Loop or stop the music after it is over, depending on the user's choice
-  loopOrStop();  
 }
 
 // Transform nav menu when scrolling down
