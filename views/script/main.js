@@ -121,9 +121,6 @@ function onMusic() {
 }
 
 function offMusic() {
-  if (typeof bgSound.loop === 'true') {
-    bgSound.loop = false;
-  }
   bgSound.pause();
 }
 
@@ -154,9 +151,16 @@ function loopBgSound() {
     }
   }
 
+  function resetLoop() {
+    if (typeof bgSound.loop === 'true') {
+      bgSound.loop = false;
+    }
+  }
+
   // On / off ipod
   // (Change the icon image, play clicking sound effect, play / pause bg music)
   function ipodHandleClick() {    
+  resetLoop();
   switchOnOffFlag();
   playSound(0.1, clickSound);
   
