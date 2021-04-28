@@ -147,10 +147,17 @@ function isIpodTurnedOn() {
 function loopBgSound() {
     if (bgSound.paused && isIpodTurnedOn) {
       console.log('replay');
-      bgSound.addEventListener('ended', () => {
-        console.log('Im in the eventListener!');
-        bgSound.play();
-      }, false);
+      if (typeof bgSound.loop == 'boolean') {
+        console.log('loop true');
+        bgSound.loop = true;
+      } else {
+        bgSound.addEventListener('ended', function() {
+          console.log('eventListener');
+          this.currentTime = 0;
+          this.play();
+        }, false);
+      }
+      bgSound.play();
     }
   }
 
