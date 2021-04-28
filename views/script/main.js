@@ -143,7 +143,7 @@ function isIpodTurnedOn() {
   return isIpodTurnedOn;
 }
 
-Loop bgSound when it is paused after the music length
+// Loop bgSound when it is paused after the music length
 function loopBgSound() {
   console.log(`loopBgSound fired!`);
     if (bgSound.paused() && isIpodTurnedOn) {
