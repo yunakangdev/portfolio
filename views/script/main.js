@@ -121,6 +121,9 @@ function onMusic() {
 }
 
 function offMusic() {
+  if (typeof bgSound.loop === 'true') {
+    bgSound.loop = false;
+  }
   bgSound.pause();
 }
 
