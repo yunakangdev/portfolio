@@ -134,7 +134,7 @@ function switchOnOffFlag() {
 }
 
 function isIpodTurnedOn() {
-  const isIpodTurnedOn;
+  let isIpodTurnedOn;
 
   if (ipod.classList.length === 1) {
     isIpodTurnedOn = false;
@@ -233,7 +233,7 @@ arrowUp.addEventListener('click', (event) => {
   scrollIntoView(link);
 })
 
-// Make each nav menu Active when each section is shown
+// Set each nav menu to active when each section is shown
 const sectionIds = [
   '#about',
   '#skills',
