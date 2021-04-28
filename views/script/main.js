@@ -152,7 +152,7 @@ function loopBgSound() {
   }
 
   function resetLoop() {
-    if (typeof bgSound.loop === 'true') {
+    if (typeof bgSound.loop === true) {
       bgSound.loop = false;
     }
   }
