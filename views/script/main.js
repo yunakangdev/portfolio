@@ -154,7 +154,7 @@ function loopBgSound() {
     if (bgSound.paused && isIpodTurnedOn) {
       bgSound.loop = true;
       bgSound.play();
-      ipod.classList.remove("on");
+      // ipod.classList.remove("on");
     }
   }
 
