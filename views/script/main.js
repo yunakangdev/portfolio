@@ -148,27 +148,40 @@ function loopBgSound() {
     if (bgSound.paused && isIpodTurnedOn) {
       bgSound.loop = true;
       bgSound.play();
+      ipod.classList.remove("on");
     }
   }
 
-  function resetLoop() {
+  var ipodTimeout;
+
+  function reset() {
+    console.log('reset fired');
     if (typeof bgSound.loop === true) {
       bgSound.loop = false;
+    }
+    if (ipodTimeout) {
+      clearTimeout(ipodTimeout);
     }
   }
 
   // On / off ipod
   // (Change the icon image, play clicking sound effect, play / pause bg music)
-  function ipodHandleClick() {    
-  resetLoop();
-  switchOnOffFlag();
+  function ipodHandleClick() { 
+    console.log(`bgSound.loop ${bgSound.loop}`)  
+    reset();
+    console.log(`bgSound.loop after resetLoop ${bgSound.loop}`)  
+    console.log(`length ${ipod.classList.length}`);
+    switchOnOffFlag();
+    console.log(`length after switchOnOffFlag ${ipod.classList.length}`);
   playSound(0.1, clickSound);
   
   if (isIpodTurnedOn) {
+    console.log('on');
     onIpod();
     onMusic();  
     setTimeout(loopBgSound, 67000);
   } else {
+    console.log('off');
     offIpod();
     offMusic();
   }
