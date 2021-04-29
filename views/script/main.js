@@ -183,6 +183,7 @@ function loopBgSound() {
   } else if (ipod.classList.length === 1) {
     offIpod();
     offMusic();
+    clearTimeout(ipodTimeout);
   }
 }
 
