@@ -136,6 +136,19 @@ function switchOnOffFlag() {
   }
 }
 
+// Check if the ipod is turned on / off
+function isIpodTurnedOn() {
+  let isIpodTurnedOn;
+
+  if (ipod.classList.length === 1) {
+    isIpodTurnedOn = false;
+  } else if (ipod.classList.length === 2) {
+    isIpodTurnedOn = true;
+  } 
+
+  return isIpodTurnedOn;
+}
+
 // Loop bgSound when it is paused after the music length
 function loopBgSound() {
     if (bgSound.paused && isIpodTurnedOn) {
