@@ -136,19 +136,6 @@ function switchOnOffFlag() {
   }
 }
 
-// Check if the ipod is turned on / off
-function isIpodTurnedOn() {
-  let isIpodTurnedOn;
-
-  if (ipod.classList.length === 1) {
-    isIpodTurnedOn = false;
-  } else if (ipod.classList.length === 2) {
-    isIpodTurnedOn = true;
-  } 
-
-  return isIpodTurnedOn;
-}
-
 // Loop bgSound when it is paused after the music length
 function loopBgSound() {
     if (bgSound.paused && isIpodTurnedOn) {
@@ -176,13 +163,11 @@ function loopBgSound() {
     reset();
     switchOnOffFlag();
     playSound(0.1, clickSound);
-  // if (ipod.classList.length === 2) {
-  if (isIpodTurnedOn) {
+  if (ipod.classList.length === 2) {
     onIpod();
     onMusic();  
     setTimeout(loopBgSound, 67000);
-  // } else if (ipod.classList.length === 1) {
-  } else if (!isIpodTurnedOn) {
+  } else if (ipod.classList.length === 1) {
     offIpod();
     offMusic();
   }
