@@ -108,18 +108,21 @@ function showHideMenu() {
 
 const ipod = document.querySelector('.ipod');
 
+// Switch the image of the ipod
 function onIpod() {
-  ipod.src = "//jean-kang.herokuapp.com/images/ipod_on.png";
+  ipod.src = "https://jean-kang.herokuapp.com/images/ipod_on.png";
 }
 
 function offIpod() {
-  ipod.src = "//jean-kang.herokuapp.com/images/ipod_off.png";
+  ipod.src = "https://jean-kang.herokuapp.com/images/ipod_off.png";
 }
 
+// Play the music
 function onMusic() {
   playSound(0.4, bgSound);
 }
 
+// Off the music
 function offMusic() {
   bgSound.pause();
 }
@@ -133,6 +136,7 @@ function switchOnOffFlag() {
   }
 }
 
+// Check if the ipod is turned on / off
 function isIpodTurnedOn() {
   let isIpodTurnedOn;
 
@@ -156,8 +160,8 @@ function loopBgSound() {
 
   var ipodTimeout;
 
+  // Reset the loop and timeout for the ipod
   function reset() {
-    console.log('reset fired');
     if (typeof bgSound.loop === true) {
       bgSound.loop = false;
     }
