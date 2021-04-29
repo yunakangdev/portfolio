@@ -109,11 +109,11 @@ function showHideMenu() {
 const ipod = document.querySelector('.ipod');
 
 function onIpod() {
-  ipod.src = "http://jean-kang.herokuapp.com/images/ipod_on.png";
+  ipod.src = "//jean-kang.herokuapp.com/images/ipod_on.png";
 }
 
 function offIpod() {
-  ipod.src = "http://jean-kang.herokuapp.com/images/ipod_off.png";
+  ipod.src = "//jean-kang.herokuapp.com/images/ipod_off.png";
 }
 
 function onMusic() {
@@ -138,7 +138,9 @@ function isIpodTurnedOn() {
 
   if (ipod.classList.length === 1) {
     isIpodTurnedOn = false;
-  } else isIpodTurnedOn = true;
+  } else if (ipod.classList.length === 2) {
+    isIpodTurnedOn = true;
+  } 
 
   return isIpodTurnedOn;
 }
@@ -167,21 +169,16 @@ function loopBgSound() {
   // On / off ipod
   // (Change the icon image, play clicking sound effect, play / pause bg music)
   function ipodHandleClick() { 
-    console.log(`bgSound.loop ${bgSound.loop}`)  
     reset();
-    console.log(`bgSound.loop after resetLoop ${bgSound.loop}`)  
-    console.log(`length ${ipod.classList.length}`);
     switchOnOffFlag();
-    console.log(`length after switchOnOffFlag ${ipod.classList.length}`);
     playSound(0.1, clickSound);
-    console.log(isIpodTurnedOn());
-  if (ipod.classList.length === 2) {
-    console.log('on');
+  // if (ipod.classList.length === 2) {
+  if (isIpodTurnedOn) {
     onIpod();
     onMusic();  
     setTimeout(loopBgSound, 67000);
-  } else if (ipod.classList.length === 1) {
-    console.log('off');
+  // } else if (ipod.classList.length === 1) {
+  } else if (!isIpodTurnedOn) {
     offIpod();
     offMusic();
   }
