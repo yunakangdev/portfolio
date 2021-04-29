@@ -174,7 +174,7 @@ function loopBgSound() {
     switchOnOffFlag();
     console.log(`length after switchOnOffFlag ${ipod.classList.length}`);
     playSound(0.1, clickSound);
-    console.log(`isIpodTurnedOn ${isIpodTurnedOn}`);
+    console.log(isIpodTurnedOn);
   if (isIpodTurnedOn === true) {
     console.log('on');
     onIpod();
