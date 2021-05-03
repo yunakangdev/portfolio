@@ -106,9 +106,8 @@ function showHideMenu() {
   }
 }
 
-const ipod = document.querySelector('.ipod');
-
 // Switch the image of the ipod
+const ipod = document.querySelector('.ipod');
 function onIpod() {
   ipod.src = "https://jean-kang.herokuapp.com/images/ipod_on.png";
 }
@@ -158,33 +157,46 @@ function loopBgSound() {
     }
   }
 
-  var ipodTimeout;
-
-  // Reset the loop and timeout for the ipod
-  function reset() {
-    if (typeof bgSound.loop === true) {
-      bgSound.loop = false;
-    }
-    if (ipodTimeout) {
-      clearTimeout(ipodTimeout);
-    }
+// Reset the loop and timeout for the ipod
+var ipodTimeout;
+function reset() {
+  if (typeof bgSound.loop === true) {
+    bgSound.loop = false;
   }
-
-  // On / off ipod
-  // (Change the icon image, play clicking sound effect, play / pause bg music)
-  function ipodHandleClick() { 
-    reset();
-    switchOnOffFlag();
-    playSound(0.1, clickSound);
-  if (ipod.classList.length === 2) {
-    onIpod();
-    onMusic();  
-    ipodTimeout = setTimeout(loopBgSound, 67000);
-  } else if (ipod.classList.length === 1) {
-    offIpod();
-    offMusic();
-    reset();
+  if (ipodTimeout) {
+    clearTimeout(ipodTimeout);
   }
+}
+
+// On / off ipod
+// (Change the icon image, play clicking sound effect, play / pause bg music)
+function ipodHandleClick() { 
+  reset();
+  switchOnOffFlag();
+  playSound(0.1, clickSound);
+if (ipod.classList.length === 2) {
+  onIpod();
+  onMusic();  
+  ipodTimeout = setTimeout(loopBgSound, 67000);
+} else if (ipod.classList.length === 1) {
+  offIpod();
+  offMusic();
+  reset();
+}
+}
+
+// hide ipod when scrolling down/up
+var timer;
+const iPod = document.querySelector('.ipod');
+document.addEventListener('scroll', () => {
+  clearTimeout(timer);
+  timer = setTimeout(showIpod, 150);
+  if(window.scrollY >= navbarHeight) {
+    ipod.style.opacity = 1 - (window.scrollY - navbarHeight) / 100;
+  }
+});
+function showIpod() {
+  ipod.style.opacity = 1;
 }
 
 // Transform nav menu when scrolling down
@@ -202,9 +214,8 @@ document.addEventListener('scroll', () => {
   }
 })
 
-const navbarBackground = document.querySelector('#navbar__menu');
-
 // Fade in / out nav menu when scrolling down
+const navbarBackground = document.querySelector('#navbar__menu');
 document.addEventListener('scroll', () => {
   if (window.scrollY < navbarHeight) {
     navbarBackground.style.opacity = 1 - window.scrollY / navbarHeight;
@@ -241,20 +252,6 @@ document.addEventListener('scroll', () => {
     arrowUp.classList.remove('visible');
   }
 });
-
-// hide ipod when scrolling down/up
-var timer;
-const iPod = document.querySelector('.ipod');
-document.addEventListener('scroll', () => {
-  clearTimeout(timer);
-  timer = setTimeout(showIpod, 150);
-  if(window.scrollY >= navbarHeight) {
-    ipod.style.opacity = 1 - (window.scrollY - navbarHeight) / 100;
-  }
-});
-function showIpod() {
-  ipod.style.opacity = 1;
-}
 
 // Scrolling up when clicking arrow up button
 arrowUp.addEventListener('click', (event) => {
