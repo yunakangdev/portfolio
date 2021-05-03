@@ -179,14 +179,6 @@ p {
 }
 
 /* Home */
-/* Switch img depends on the window size */
-#home__image {
-  background: center/cover no-repeat url("../images/home_web.png");
-  max-width: 100%;
-  height: 600px;
-  margin: auto;
-}
-
 #home {
   position: relative;
 }
@@ -197,14 +189,22 @@ p {
 }
 
 #ipod__container {
-  position: absolute;
-  left: 400px;
-  bottom: 40px;
+  position: fixed;
+  left: 16px;
+  bottom: 30px;
 }
 
 img.ipod {
   max-width: 55px;
   cursor: pointer;
+}
+
+.ipod {
+  transition: opacity var(--animation-duration) ease-in;
+}
+
+.ipod.invisible {
+  opacity: 0;
 }
 
 /* About */
@@ -247,6 +247,7 @@ img.ipod {
 .major__description:hover {
   background-position: -120% 0%;
 }
+
 /* Education */
 .education__container {
   text-align: left;
@@ -447,7 +448,7 @@ img.ipod {
 
 .slide img {
   display: flex;
-  width: 100%;
+  width: 800px;
 }
 
 .slide__description {
@@ -481,7 +482,7 @@ img.ipod {
 
 .slide:hover .slide__description {
   background: var(--color-navy);
-  opacity: 0.6;
+  opacity: 0.75;
   transition: 1s;
   cursor: pointer;
 }
@@ -500,7 +501,7 @@ img.ipod {
 }
 
 .navigation-manual__btn {
-  border: 2px solid transparent;
+  border: 1px solid black;
   background: var(--color-navy);
   width: 8px;
   height: 8px;
@@ -530,6 +531,10 @@ img.ipod {
 #radio2:checked ~ .first {
   margin-left: -50%;
 }
+
+/* #radio3:checked ~ .first {
+  margin-left: -100%;
+} */
 
 /* Testimonials */
 #testimonials {
@@ -678,7 +683,13 @@ img.ipod {
 
 /* Currently learning Responsive Design for improvement */
 /* iPad */
-/* For below 768px screen width */
+/* For below 900px screen width */
+@media screen and (max-width: 900px) {
+  #home__image {
+    content: url("../images/home_mobile.png");
+  }
+}
+
 @media screen and (max-width: 768px) {
   /* 768 Typography */
   h1 {
@@ -717,18 +728,9 @@ img.ipod {
     margin-left: -18px;
   }
 
-  /* 768 Home */
-  #home__image {
-    background: top/cover no-repeat url("../images/home_mobile.png");
-    max-width: 80%;
-    height: 700px;
-    padding-bottom: 20px;
-  }
-
   /* 768 Ipod */
   #ipod__container {
     width: 45px;
-    transform: translate(-490%, -90%);
   }
 
   /* 768 About */
@@ -862,6 +864,10 @@ img.ipod {
     width: 100%;
   }
 
+  .projects__slider img {
+    width: 500px;
+  }
+
   .slide {
     height: 72%;
   }
@@ -951,15 +957,9 @@ img.ipod {
     margin-left: 0px;
   }
 
-  /* 414 Home */
-  #home__image {
-    max-width: 100%;
-  }
-
   /* 414 iPod */
   #ipod__container {
     width: 40px;
-    transform: translate(-920%, -230%);
   }
 
   /* 414 About */
@@ -1069,16 +1069,9 @@ img.ipod {
     padding: 0px 6px;
   }
 
-  /* 280 Home */
-  #home__image {
-    width: 100%;
-    height: 520px;
-  }
-
   /* 280 iPod */
   #ipod__container {
     width: 15px;
-    transform: translate(-2300%, -90%);
   }
 
   /* 280 Skills */

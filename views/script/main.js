@@ -87,7 +87,7 @@ var counter = 1;
 setInterval(function() {
   document.getElementById('radio' + counter).checked = true;
   counter++;
-  if(counter > 2) {
+  if(counter > 3) {
     counter = 1;
   }
 }, 5000);
@@ -230,9 +230,8 @@ navbarMenu.addEventListener('click', (event) => {
   scrollIntoView(link);
 });
 
-const arrowUp = document.querySelector('.arrow-up');
-
 // Show arrow up button when scrolling down
+const arrowUp = document.querySelector('.arrow-up');
 document.addEventListener('scroll', () => {
   if(window.scrollY >= navbarHeight) {
     arrowUp.style.opacity = 0 + (window.scrollY - navbarHeight) / 150;
@@ -242,6 +241,20 @@ document.addEventListener('scroll', () => {
     arrowUp.classList.remove('visible');
   }
 });
+
+// hide ipod when scrolling down/up
+var timer;
+const iPod = document.querySelector('.ipod');
+document.addEventListener('scroll', () => {
+  clearTimeout(timer);
+  timer = setTimeout(showIpod, 150);
+  if(window.scrollY >= navbarHeight) {
+    ipod.style.opacity = 1 - (window.scrollY - navbarHeight) / 100;
+  }
+});
+function showIpod() {
+  ipod.style.opacity = 1;
+}
 
 // Scrolling up when clicking arrow up button
 arrowUp.addEventListener('click', (event) => {

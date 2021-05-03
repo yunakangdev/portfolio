@@ -44,8 +44,9 @@
 
   <!-- Home -->
   <section id="home">
-    <div id="home__image"></div>
-    <!-- sound -->
+    <a href="http://society6.com/orangesage" target="_blank">
+      <div id="home__image"><img src="../images/home_web.png"></div>
+    </a>
     <section class="ipod__container">
       <div id="ipod__container">
         <img class="ipod" src="./images/ipod_off.png" onClick="ipodHandleClick()" alt="">
@@ -173,8 +174,8 @@
         <input type="radio" name="radio-btn" id="radio1"></input>
         <input type="radio" name="radio-btn" id="radio2"></input>
         <div class="slide first">
-          <a href="https://yuna-the-label.herokuapp.com/index" target="_blank"><img src="../images/project1.png"
-              alt="yuna the label">
+          <a href="http://yuna-the-label.herokuapp.com/index" target="_blank">
+            <img src="../images/project1.png" alt="yuna the label">
             <div class="slide__description">
               <h3>Yuna the label</h3>
               <span>A design studio</span>
@@ -183,6 +184,16 @@
           </a>
         </div>
         <div class="slide">
+          <a href="http://github.com/jeankangdev/movie-oscars-collection" target="_blank">
+            <img src="../images/project3.png" alt="pictamovie">
+            <div class="slide__description">
+              <h3>Picktamovie</h3>
+              <span>2021 Movie Oscar Collection</span>
+              <span>React, Firebase, Redux, Netlify</span>
+            </div>
+          </a>
+        </div>
+        {{!-- <div class="slide">
           <img src="../images/project2.png" alt="ehbnb">
           <div class="slide__description">
             <h3>Ehbnb</h3>
@@ -190,11 +201,12 @@
             <span>A vacation rental online marketplace</span>
             <span>Node.js, HTML, CSS, ES6, MongoDB, Heroku</span>
           </div>
-        </div>
+        </div> --}}
       </div>
       <div class="navigation-manual">
         <label for="radio1" class="navigation-manual__btn one"></label>
         <label for="radio2" class="navigation-manual__btn two"></label>
+        {{!-- <label for="radio3" class="navigation-manual__btn three"></label> --}}
       </div>
     </div>
   </section>
