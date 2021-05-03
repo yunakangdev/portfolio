@@ -181,6 +181,7 @@ p {
 
 /* Home */
 #home {
+  width: 100%;
   position: relative;
 }
 
@@ -687,6 +688,7 @@ img.ipod {
 /* For below 900px screen width */
 @media screen and (max-width: 900px) {
   #home__image {
+    margin: auto;
     content: url("../images/home_mobile.png");
   }
 }
@@ -931,6 +933,11 @@ img.ipod {
   .skills__container p,
   .testimonials__container p {
     max-width: 300px;
+  }
+
+  /* 414 Home */
+  #home__image {
+    width: 60%;
   }
 
   /* 414 Nav */
