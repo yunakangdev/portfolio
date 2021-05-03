@@ -23,6 +23,7 @@
 
   /* Animation */
   --animation-duration: 300ms;
+  --animation-duration-long: 600ms;
 }
 
 /* Universal tags */
@@ -496,19 +497,19 @@ img.ipod {
   display: flex;
   position: relative;
   width: 100%;
-  top: -50px;
+  top: -40px;
   left: 30px;
 }
 
 .navigation-manual__btn {
-  border: 1px solid black;
+  border: 1px solid b;
   background: var(--color-navy);
   width: 8px;
   height: 8px;
   outline: none;
   cursor: pointer;
   border-radius: 8px;
-  transition: var(--animation-duration);
+  transition: var(--animation-duration-long);
 }
 
 .navigation-manual__btn:not(:last-child) {
@@ -532,9 +533,9 @@ img.ipod {
   margin-left: -50%;
 }
 
-/* #radio3:checked ~ .first {
+#radio3:checked ~ .first {
   margin-left: -100%;
-} */
+}
 
 /* Testimonials */
 #testimonials {
