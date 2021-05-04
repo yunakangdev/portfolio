@@ -932,12 +932,13 @@ img.ipod {
 
   .skills__container p,
   .testimonials__container p {
-    max-width: 300px;
+    max-width: 400px;
+    margin: auto;
   }
 
   /* 414 Home */
   #home__image {
-    width: 60%;
+    width: 80%;
   }
 
   /* 414 Nav */
@@ -1014,6 +1015,10 @@ img.ipod {
 
   .navigation-manual__btn:not(:last-child) {
     margin-right: 14px;
+  }
+
+  .slide img {
+    width: 400px;
   }
 
   /* 414 Testimonials */
