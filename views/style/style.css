@@ -183,6 +183,15 @@ p {
 #home {
   width: 100%;
   position: relative;
+  margin: auto;
+}
+
+#home__image {
+  display: flex;
+}
+
+#home__image img {
+  margin: auto;
 }
 
 /* iPod */
@@ -505,11 +514,11 @@ img.ipod {
 .navigation-manual__btn {
   border: 1px solid b;
   background: var(--color-navy);
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   outline: none;
+  border-radius: 10px;
   cursor: pointer;
-  border-radius: 8px;
   transition: var(--animation-duration-long);
 }
 
@@ -522,8 +531,6 @@ img.ipod {
   background: transparent;
   width: 11px;
   height: 11px;
-  margin-top: -1.5px;
-  margin-left: -1.5px;
 }
 
 #radio1:checked ~ .first {
